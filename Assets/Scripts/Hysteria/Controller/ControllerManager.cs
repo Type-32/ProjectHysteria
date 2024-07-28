@@ -4,20 +4,22 @@ using UnityEngine.InputSystem;
 
 namespace Hysteria.Controller
 {
-    public class ControllerManager : ControllerComponent
+    public class ControllerManager : MonoBehaviour
     {
         [SerializeField] protected bool isFirstPersonMode = false;
-        [SerializeField] private ControllerMovement Movement;
+        public ControllerMovement Movement;
+        public ControllerInputManager InputManager;
+        public Rigidbody RB;
 
-        private void OnEnable()
+        public void RegisterActions()
         {
             InputManager.GetMap().Topdown.Interact.performed += OnPerformInteract;
             InputManager.GetMap().FP.Interact.performed += OnPerformInteract;
 
             InputManager.GetMap().Topdown.LMB.performed += OnPerformLMB;
         }
-
-        private void OnDisable()
+        
+        public void UnregisterActions()
         {
             InputManager.GetMap().Topdown.Interact.performed -= OnPerformInteract;
             InputManager.GetMap().FP.Interact.performed -= OnPerformInteract;

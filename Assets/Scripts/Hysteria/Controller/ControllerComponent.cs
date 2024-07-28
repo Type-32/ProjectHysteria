@@ -7,18 +7,25 @@ namespace Hysteria.Controller
     {
         protected ControllerManager Controller;
         protected ControllerInputManager InputManager;
+        protected ControllerMovement Movement;
         protected Rigidbody RB;
 
-        private void Awake()
+        protected virtual void Awake()
         {
-            Controller = GetComponent<ControllerManager>();
-            InputManager = GetComponent<ControllerInputManager>();
-            RB = GetComponent<Rigidbody>();
+            GetReferences();
         }
 
         public ControllerManager GetController()
         {
             return Controller;
+        }
+
+        public void GetReferences()
+        {
+            if(Controller == null) Controller = GetComponent<ControllerManager>();
+            if(InputManager == null) InputManager = GetComponent<ControllerInputManager>();
+            if(Movement == null) Movement = GetComponent<ControllerMovement>();
+            if(RB == null) RB = GetComponent<Rigidbody>();
         }
     }
 }

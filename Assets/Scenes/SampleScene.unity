@@ -450,6 +450,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFirstPersonMode: 0
   Movement: {fileID: 1088822969}
+  InputManager: {fileID: 1088822970}
+  RB: {fileID: 1088822971}
 --- !u!114 &1088822969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +469,7 @@ MonoBehaviour:
   maxSpeed: 5
   rotationSpeed: 10
   mouseSensitivity: 2
+  dragForce: 0.05
   cameraTransform: {fileID: 963194228}
 --- !u!114 &1088822970
 MonoBehaviour:
