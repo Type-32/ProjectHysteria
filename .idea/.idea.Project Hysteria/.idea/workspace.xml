@@ -4,13 +4,188 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="INIT COMMIT">
+    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="Force Based Rigidbody Controller">
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lit.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lit.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/HazeGlass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/HazeGlass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Glass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Glass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Buddha.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Buddha.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Ground.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Ground.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Rock.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_PBR_Rock.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Buddha.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Buddha.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Ground.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Ground.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Rock.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Rock.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Buddha.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Buddha.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Ground_PolyBrush.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Ground_PolyBrush.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Rock.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlit_Variant_Rock.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlity_Variant_Ground.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Psx_Unlity_Variant_Ground.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/transparent-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/transparent-blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Rock_1.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Rock_1.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Rocks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Rocks.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/buddhaPreaching.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/buddhaPreaching.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/buddhaPreaching.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/buddhaPreaching.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/grass.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/grass.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/rock.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/rock.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_PBR.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_PBR.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_PBRSettings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_PBRSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_UnlitSettings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_UnlitSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant_PolyBrush.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant_PolyBrush.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant_PolyBrush.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Psx_Unlit_Variant_PolyBrush.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTEffectController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTEffectController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTRenderFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTRenderFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/Crt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CRT/Crt.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/Dithering.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/Dithering.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/DitheringController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/DitheringController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/DitheringRenderFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dithering/DitheringRenderFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/Fog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/Fog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/FogController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/FogController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/FogRenderFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Fog/FogRenderFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/Pixelation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/Pixelation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/PixelationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/PixelationController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/PixelationRenderFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pixelation/PixelationRenderFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/CRTShader.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/CRTShader.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Dithering.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Dithering.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Fog.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Fog.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/HLSL.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/HLSL/CustomLighting.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/HLSL/CustomLighting.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/HazeGlassShader.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/HazeGlassShader.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/PS1AffineFog.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/PS1AffineFog.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/PS1AffineFogPolyBrush.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/PS1AffineFogPolyBrush.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Readme.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Unlit_PS1AffineFog.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Unlit_PS1AffineFog.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Unlit_PS1AffineFogPolyBrush.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Other/Unlit_PS1AffineFogPolyBrush.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Pixelation.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Pixelation.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_PBR_Master.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_PBR_Master.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_PBR_Master_with_transparency.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_PBR_Master_with_transparency.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_Unlit_Master.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/URP_PSX_Unlit_Master.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/cginc/DitheringPatterns.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/cginc/DitheringPatterns.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/cginc/voronoi.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/cginc/voronoi.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/AffineTextureMapping.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/AffineTextureMapping.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateAdditionalLights.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateAdditionalLights.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateLighting.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateLighting.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateMainLight.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CalculateMainLight.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CameraClipping.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/CameraClipping.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/ColorPrecision.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/ColorPrecision.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/DirectSpecular.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/DirectSpecular.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Fatten.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Fatten.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/GetMainLight.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/GetMainLight.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Other.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Other/VoronoiWithCenter.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Other/VoronoiWithCenter.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Other/randomColorPicker.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/Other/randomColorPicker.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/UV_Pixelation.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/UV_Pixelation.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/VertexJitter.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Subgraphs/VertexJitter.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TestGrass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TestGrass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Asset_Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Asset_Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Global Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Global Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Volume Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX Volume Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX-Render Pipeline Asset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX-Render Pipeline Asset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/testgrass.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/testgrass.jpeg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +213,9 @@
     "accountId": "64032c04-9f59-4d7e-8c63-490792191381"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/administrator/Documents/Unity Projects/Project Hysteria/Assets/Scripts/Hysteria/Controller/ControllerComponent.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -61,7 +239,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -118,7 +296,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681255876745</updated>
-      <workItem from="1722177487751" duration="12566000" />
+      <workItem from="1722177487751" duration="19602000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
@@ -136,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722195828494</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Force Based Rigidbody Controller">
+      <option name="closed" value="true" />
+      <created>1722199362331</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722199362331</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +341,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Updated Sth" />
     <MESSAGE value="INIT COMMIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="INIT COMMIT" />
+    <MESSAGE value="Force Based Rigidbody Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Force Based Rigidbody Controller" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

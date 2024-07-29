@@ -1,6 +1,9 @@
 using System;
+using Cinemachine;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Hysteria.Controller
 {
@@ -8,28 +11,26 @@ namespace Hysteria.Controller
     public class ControllerMovement : ControllerComponent
     {
         [SerializeField] protected bool isFirstPersonMode = false;
-        [SerializeField] protected float moveForce = 10f;
         [SerializeField] protected float maxSpeed = 5f;
         [SerializeField] protected float rotationSpeed = 10f;
-        [SerializeField] protected float mouseSensitivity = 2f;
-        [SerializeField] protected float dragForce = 0.05f;
-        [SerializeField] protected float accelerationFactor = 2f;
-        [SerializeField] protected Transform cameraTransform;
+        [SerializeField, MinMaxSlider(0, 200)] protected float mouseSensitivity = 100f;
+        [SerializeField] protected CinemachineVirtualCamera firstPersonCamera;
+        [SerializeField] protected CinemachineVirtualCamera topdownCamera;
+        protected Camera camera;
 
-        private Vector3 movement;
-        private Vector3 lastNonZeroMovement;
+        private Vector3 movement, lastNonZeroMovement;
         private float verticalRotation = 0f;
         private Vector2 _directInput, _smoothInput, _directLookInput;
         
         protected void Start()
         {
             // Ensure the Rigidbody is set up correctly
-            RB.freezeRotation = true;
+            // RB.freezeRotation = true;
             // RB.constraints = RigidbodyConstraints.FreezeRotationZ;
 
-            if (!cameraTransform)
+            if (!camera)
             {
-                cameraTransform = Camera.main.transform;
+                camera = Camera.main;
             }
 
             ToggleMode(false);
@@ -57,9 +58,9 @@ namespace Hysteria.Controller
 
         void Update()
         {
-            // Get input
-            float horizontalInput = _directInput.x;
-            float verticalInput = _directInput.y;
+            
+            float horizontalInput = _smoothInput.x;
+            float verticalInput = _smoothInput.y;
 
             // Calculate movement vector
             if (isFirstPersonMode)
@@ -68,12 +69,11 @@ namespace Hysteria.Controller
             }
             else
             {
-                movement = new Vector3(horizontalInput, 0f, verticalInput);
+                movement = new Vector3(_smoothInput.x, 0f, _smoothInput.y);
             }
-            movement = movement.normalized;
 
             // Store last non-zero movement for top-down rotation when stationary
-            if (movement != Vector3.zero)
+            if (!_directInput.Equals(Vector2.zero))
             {
                 lastNonZeroMovement = movement;
             }
@@ -91,62 +91,43 @@ namespace Hysteria.Controller
                 float mouseX = _directLookInput.x * mouseSensitivity;
                 float mouseY = _directLookInput.y * mouseSensitivity;
 
-                transform.Rotate(Vector3.up * mouseX);
+                transform.Rotate(0, mouseX, 0);
 
                 verticalRotation -= mouseY;
                 verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
-                cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+                firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+            }
+            else
+            {
+                RotateCharacter();
             }
         }
 
         private void FixedUpdate()
         {
             MoveCharacter();
-
-            if (!isFirstPersonMode)
-            {
-                RotateCharacter();
-            }
-            
             // Debug.Log(_smoothInput);
         }
 
         private void MoveCharacter()
         {
-            Vector3 flatVelocity = new Vector3(RB.velocity.x, 0, RB.velocity.z);
+            _smoothInput = Vector2.Lerp(_smoothInput, _directInput, Time.fixedDeltaTime * 9);
 
-            // Apply force only when there's input
-            if (movement != Vector3.zero)
-            {
-                // Calculate the force needed to reach max speed
-                Vector3 targetVelocity = movement * maxSpeed;
-                Vector3 velocityChange = targetVelocity - flatVelocity;
-        
-                // Increase the force for faster acceleration
-                Vector3 force = velocityChange * (moveForce * accelerationFactor);
+            if (_directInput.Equals(Vector2.zero) && (_smoothInput.x <= 0.05 || _smoothInput.y <= 0.05))
+                _smoothInput = Vector2.zero;
+            
+            Vector3 targetVelocity = movement * maxSpeed;
 
-                // Remove the force clamping to allow for quicker acceleration
-                RB.AddForce(force, ForceMode.Force);
-            }
-            else
-            {
-                // Apply drag when there's no input
-                RB.AddForce(-flatVelocity * dragForce, ForceMode.VelocityChange);
-            }
+            targetVelocity.y = RB.velocity.y;
 
-            // Limit max speed
-            if (flatVelocity.magnitude > maxSpeed)
-            {
-                flatVelocity = flatVelocity.normalized * maxSpeed;
-                RB.velocity = new Vector3(flatVelocity.x, RB.velocity.y, flatVelocity.z);
-            }
+            RB.velocity = targetVelocity;
         }
 
         private void RotateCharacter()
         {
             if (movement != Vector3.zero)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(movement, Vector3.up);
+                Quaternion targetRotation = Quaternion.LookRotation(lastNonZeroMovement, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
             }
         }
@@ -165,12 +146,16 @@ namespace Hysteria.Controller
             if (isFirstPersonMode)
             {
                 verticalRotation = 0f;
-                cameraTransform.localRotation = Quaternion.identity;
+                firstPersonCamera.transform.localRotation = Quaternion.identity;
+                firstPersonCamera.Priority = 20;
+                topdownCamera.Priority = 10;
             }
             else
             {
                 transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
                 RB.velocity = new Vector3(RB.velocity.x, 0f, RB.velocity.z);
+                firstPersonCamera.Priority = 10;
+                topdownCamera.Priority = 20;
             }
             
             // RB.useGravity = isFirstPersonMode;

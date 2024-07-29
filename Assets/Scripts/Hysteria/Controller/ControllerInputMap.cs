@@ -116,7 +116,7 @@ namespace Hysteria.Controller
                 {
                     ""name"": ""Gamepad"",
                     ""id"": ""9033fb30-e68d-497d-ae32-8f7876601044"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -227,12 +227,12 @@ namespace Hysteria.Controller
                 },
                 {
                     ""name"": ""CameraLook"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""448a83bc-5213-47d7-a1da-2378f6fc91ff"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -294,7 +294,7 @@ namespace Hysteria.Controller
                 {
                     ""name"": ""Gamepad"",
                     ""id"": ""a91af5f5-1b41-4fa2-8d11-9130fef129eb"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

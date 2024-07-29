@@ -46,8 +46,8 @@ namespace Hysteria.Controller
 
         public ControllerInputMap GetMap()
         {
-            // if (_inputMap is null)
-            //     _inputMap = new ControllerInputMap();
+            if (_inputMap is null)
+                _inputMap = new ControllerInputMap();
             return _inputMap;
         }
 
