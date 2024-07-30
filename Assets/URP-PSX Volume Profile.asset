@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Value: 256
   colorPrecision:
     m_OverrideState: 1
-    m_Value: -16.4
+    m_Value: 56.9
 --- !u!114 &-758010384845797820
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea62842ddb6960488930897ba9ce398, type: 3}
   m_Name: Dithering
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   patternIndex:
     m_OverrideState: 1
     m_Value: 0
@@ -158,19 +158,19 @@ MonoBehaviour:
   active: 1
   fogDensity:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 10.7
   fogDistance:
     m_OverrideState: 1
-    m_Value: 104
+    m_Value: 85
   fogColor:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 0}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   ambientColor:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 0}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   fogNear:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 6.7
   fogFar:
     m_OverrideState: 0
     m_Value: 81.3

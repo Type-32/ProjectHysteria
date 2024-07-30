@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11bd567f6fd4e7ba0e8febc7111c70a, type: 3}
+  m_Name: 1_FailMtMid
+  m_EditorClassIdentifier: 
+  DialogCharacters:
+  - {fileID: 11400000, guid: e28db461c182b4871ac0e313d84d0413, type: 2}
+  Dialogs:
+  - Character: {fileID: 11400000, guid: e28db461c182b4871ac0e313d84d0413, type: 2}
+    CharacterContent: Ever thought about convincing that boulder to roll itself?
+      Might save you some trouble!
+    DialogType: 0
+    UseRightBackground: 1
