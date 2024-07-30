@@ -23,7 +23,16 @@ namespace Hysteria.Dialog
         [SerializeField] private Text rightTitleElement, rightContentElement;
         [SerializeField] private Image rightSpriteElement;
         [SerializeField] private Slider timerElement;
-        [SerializeField] private Button opt1, opt2, opt3, opt4;
+        [SerializeField, ReadOnly] private List<Button> options;
+        [SerializeField] private int selectedOptionIndex = 0;
+
+        public Button SelectedOption
+        {
+            get
+            {
+                return options[selectedOptionIndex];
+            }
+        }
 
         private ConversationControls _map;
         private ConversationObject _currentConversationObject;
@@ -46,24 +55,20 @@ namespace Hysteria.Dialog
 
         public bool InConversation => CurrentConversation > -1;
 
-        public void EnableConvInput()
+        public void EnableInputs()
         {
             _map.Enable();
-            _map.Primary.Next.performed += PerformedNext;
-            _map.Primary.Opt1.performed += PerformedOpt1;
-            _map.Primary.Opt2.performed += PerformedOpt2;
-            _map.Primary.Opt3.performed += PerformedOpt3;
-            _map.Primary.Opt4.performed += PerformedOpt4;
+            _map.Primary.Continue.performed += OnPerformContinue;
+            _map.Primary.SelectNext.performed += OnPerformSelectNext;
+            _map.Primary.SelectPrevious.performed += OnPerformSelectPrevious;
         }
 
-        public void DisableConvInput()
+        public void DisableInputs()
         {
             _map.Disable();
-            _map.Primary.Next.performed -= PerformedNext;
-            _map.Primary.Opt1.performed -= PerformedOpt1;
-            _map.Primary.Opt2.performed -= PerformedOpt2;
-            _map.Primary.Opt3.performed -= PerformedOpt3;
-            _map.Primary.Opt4.performed -= PerformedOpt4;
+            _map.Primary.Continue.performed -= OnPerformContinue;
+            _map.Primary.SelectNext.performed -= OnPerformSelectNext;
+            _map.Primary.SelectPrevious.performed -= OnPerformSelectPrevious;
         }
 
         private void Awake()
@@ -74,24 +79,6 @@ namespace Hysteria.Dialog
             _dialogDataIndex = -1;
             
             holder.SetActive(false);
-            
-            // opt1.onClick.AddListener(() =>
-            // {
-            //     Opt1();
-            // });
-            // opt2.onClick.AddListener(() =>
-            // {
-            //     Opt2();
-            // });
-            // opt3.onClick.AddListener(() =>
-            // {
-            //     Opt3();
-            // });
-            // opt4.onClick.AddListener(() =>
-            // {
-            //     Opt4();
-            // });
-
         }
 
         private void Update()
@@ -140,18 +127,11 @@ namespace Hysteria.Dialog
 
             // Show/hide options based on DialogType
             bool isMultiResponse = currentDialog.DialogType == DialogType.MultiResponse;
-            opt1?.gameObject.SetActive(isMultiResponse);
-            opt2?.gameObject.SetActive(isMultiResponse);
-            opt3?.gameObject.SetActive(isMultiResponse);
-            opt4?.gameObject.SetActive(isMultiResponse);
 
             if (isMultiResponse)
             {
                 // Update option texts if needed
-                // opt1.GetComponentInChildren<Text>().text = currentDialog.ResponseOptions[0];
-                // opt2.GetComponentInChildren<Text>().text = currentDialog.ResponseOptions[1];
-                // opt3.GetComponentInChildren<Text>().text = currentDialog.ResponseOptions[2];
-                // opt4.GetComponentInChildren<Text>().text = currentDialog.ResponseOptions[3];
+                
             }
         }
 
@@ -160,7 +140,7 @@ namespace Hysteria.Dialog
             if (InConversation) return;
             CurrentConversation = index;
             Controller.InputManager.DisableInputs();
-            EnableConvInput();
+            EnableInputs();
             
             _currentConversationObject = Conversations[index];
             _dialogDataIndex = 0;
@@ -176,35 +156,18 @@ namespace Hysteria.Dialog
         {
             CurrentConversation = -1;
             Controller.InputManager.EnableInputs();
-            DisableConvInput();
+            DisableInputs();
             
             holder.SetActive(InConversation);
         }
         
         #region Inputs
 
-        protected void PerformedNext(InputAction.CallbackContext context)
+        protected void OnPerformContinue(InputAction.CallbackContext context)
         {
-            Next();
+            ContinueConversation();
         }
-        protected void PerformedOpt1(InputAction.CallbackContext context)
-        {
-            Opt1();
-        }
-        protected void PerformedOpt2(InputAction.CallbackContext context)
-        {
-            Opt2();
-        }
-        protected void PerformedOpt3(InputAction.CallbackContext context)
-        {
-            Opt3();
-        }
-        protected void PerformedOpt4(InputAction.CallbackContext context)
-        {
-            Opt4();
-        }
-
-        public void Next()
+        protected void OnPerformSelectNext(InputAction.CallbackContext context)
         {
             if (!InConversation) return;
 
@@ -221,25 +184,27 @@ namespace Hysteria.Dialog
             if(_cachedAfterEvent != null)
                 _cachedAfterEvent?.Invoke();
         }
-
-        public void Opt1()
+        protected void OnPerformSelectPrevious(InputAction.CallbackContext context)
         {
             
         }
 
-        public void Opt2()
+        public void ContinueConversation()
         {
-            
-        }
+            if (!InConversation) return;
 
-        public void Opt3()
-        {
+            if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
+            {
+                _dialogDataIndex++;
+                UpdateDialogUI();
+            }
+            else
+            {
+                ExitConversation();
+            }
             
-        }
-
-        public void Opt4()
-        {
-            
+            if(_cachedAfterEvent != null)
+                _cachedAfterEvent?.Invoke();
         }
         #endregion
     }

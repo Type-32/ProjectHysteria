@@ -25,7 +25,7 @@ namespace Hysteria.SceneControls
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (_allowUpdateStatus)
+            if (_allowUpdateStatus && slider)
                 slider.value = SceneController.Instance.LoadingProgress;
             if (SceneController.Instance.LoadingProgress >= 1f) _allowUpdateStatus = false;
         }

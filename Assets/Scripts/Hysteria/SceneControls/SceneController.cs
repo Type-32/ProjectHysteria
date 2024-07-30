@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Hysteria.Utility;
 using NaughtyAttributes;
 using UnityEngine;
@@ -9,8 +10,11 @@ namespace Hysteria.SceneControls
     public class SceneController : Singleton<SceneController>
     {
         [SerializeField, Scene] private string transitionSceneName;
+        [SerializeField] private List<Canvas> refreshCanvasCameras = new();
         private float _loadingProgress = 0f;
         public float LoadingProgress => _loadingProgress;
+        
+        public bool IsLoading { get; private set; }
 
         public void LoadScene(string sceneName, bool useTransition = true)
         {
@@ -23,10 +27,13 @@ namespace Hysteria.SceneControls
         private IEnumerator LoadSceneRoutine(string sceneName)
         {
             _loadingProgress = 0f;
-
+            IsLoading = true;
+            
             // Load the transition scene
             yield return SceneManager.LoadSceneAsync(transitionSceneName, LoadSceneMode.Additive);
             _loadingProgress = 0.1f;
+            
+            yield return new WaitForSeconds(2);
 
             // Capture the current active scene
             Scene initialScene = SceneManager.GetActiveScene();
@@ -62,11 +69,14 @@ namespace Hysteria.SceneControls
 
             // Unload the initial scene
             yield return SceneManager.UnloadSceneAsync(initialScene);
+            
+            yield return new WaitForSeconds(2);
 
             // Unload the transition scene
             yield return SceneManager.UnloadSceneAsync(transitionSceneName);
 
             _loadingProgress = 1f;
+            IsLoading = false;
         }
 
         public float GetLoadingProgress()

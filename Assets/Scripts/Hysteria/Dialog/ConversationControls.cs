@@ -28,7 +28,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
             ""id"": ""773a3401-ff17-4bfb-b5cb-550267140dae"",
             ""actions"": [
                 {
-                    ""name"": ""Next"",
+                    ""name"": ""Continue"",
                     ""type"": ""Button"",
                     ""id"": ""23758c9e-0afa-40d3-b010-4df87adafa0d"",
                     ""expectedControlType"": ""Button"",
@@ -37,7 +37,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Opt1"",
+                    ""name"": ""SelectNext"",
                     ""type"": ""Button"",
                     ""id"": ""b6d52361-41cc-4de0-8b69-ca95b5821fb8"",
                     ""expectedControlType"": ""Button"",
@@ -46,27 +46,9 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Opt2"",
+                    ""name"": ""SelectPrevious"",
                     ""type"": ""Button"",
-                    ""id"": ""2a856be6-e7e9-4c8e-ace3-37fba5c93b8c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Opt3"",
-                    ""type"": ""Button"",
-                    ""id"": ""21899c2f-eead-4b3b-9c86-e844e28d7253"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Opt4"",
-                    ""type"": ""Button"",
-                    ""id"": ""ef238865-72ef-4675-a749-caef00e1e367"",
+                    ""id"": ""88b1f4e3-2638-4fca-b6b2-54c8fa457f7a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -81,7 +63,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Next"",
+                    ""action"": ""Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -92,95 +74,51 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Next"",
+                    ""action"": ""Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""fcaa2599-5cd0-489e-9984-5475888445bd"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Opt1"",
+                    ""action"": ""SelectNext"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""9c4bec8b-89c4-46bd-b09b-f3e1a39de8ca"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Opt1"",
+                    ""action"": ""SelectNext"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""daeb680a-3085-49a3-a680-d57dd92b7b23"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""id"": ""16799dfa-c9ff-420a-b6ed-14569ee40bcd"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Opt2"",
+                    ""action"": ""SelectPrevious"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0f4e6891-aaca-4611-9910-f4bb0949ce72"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""38895bfa-f5c3-4dd5-8c86-906ed86a598e"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Opt2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""63f5ba99-b5e0-4398-a81f-594ac8f625c0"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Opt3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b15034f2-1d9e-49a5-99c3-00715cf52ed8"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Opt3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d8ffe081-f640-446d-889f-8bf55101accd"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Opt4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4eb772f2-6ba1-4ba6-aee5-1083c9903870"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Opt4"",
+                    ""action"": ""SelectPrevious"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -191,11 +129,9 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
 }");
         // Primary
         m_Primary = asset.FindActionMap("Primary", throwIfNotFound: true);
-        m_Primary_Next = m_Primary.FindAction("Next", throwIfNotFound: true);
-        m_Primary_Opt1 = m_Primary.FindAction("Opt1", throwIfNotFound: true);
-        m_Primary_Opt2 = m_Primary.FindAction("Opt2", throwIfNotFound: true);
-        m_Primary_Opt3 = m_Primary.FindAction("Opt3", throwIfNotFound: true);
-        m_Primary_Opt4 = m_Primary.FindAction("Opt4", throwIfNotFound: true);
+        m_Primary_Continue = m_Primary.FindAction("Continue", throwIfNotFound: true);
+        m_Primary_SelectNext = m_Primary.FindAction("SelectNext", throwIfNotFound: true);
+        m_Primary_SelectPrevious = m_Primary.FindAction("SelectPrevious", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -257,20 +193,16 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
     // Primary
     private readonly InputActionMap m_Primary;
     private List<IPrimaryActions> m_PrimaryActionsCallbackInterfaces = new List<IPrimaryActions>();
-    private readonly InputAction m_Primary_Next;
-    private readonly InputAction m_Primary_Opt1;
-    private readonly InputAction m_Primary_Opt2;
-    private readonly InputAction m_Primary_Opt3;
-    private readonly InputAction m_Primary_Opt4;
+    private readonly InputAction m_Primary_Continue;
+    private readonly InputAction m_Primary_SelectNext;
+    private readonly InputAction m_Primary_SelectPrevious;
     public struct PrimaryActions
     {
         private @ConversationControls m_Wrapper;
         public PrimaryActions(@ConversationControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Next => m_Wrapper.m_Primary_Next;
-        public InputAction @Opt1 => m_Wrapper.m_Primary_Opt1;
-        public InputAction @Opt2 => m_Wrapper.m_Primary_Opt2;
-        public InputAction @Opt3 => m_Wrapper.m_Primary_Opt3;
-        public InputAction @Opt4 => m_Wrapper.m_Primary_Opt4;
+        public InputAction @Continue => m_Wrapper.m_Primary_Continue;
+        public InputAction @SelectNext => m_Wrapper.m_Primary_SelectNext;
+        public InputAction @SelectPrevious => m_Wrapper.m_Primary_SelectPrevious;
         public InputActionMap Get() { return m_Wrapper.m_Primary; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -280,40 +212,28 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PrimaryActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PrimaryActionsCallbackInterfaces.Add(instance);
-            @Next.started += instance.OnNext;
-            @Next.performed += instance.OnNext;
-            @Next.canceled += instance.OnNext;
-            @Opt1.started += instance.OnOpt1;
-            @Opt1.performed += instance.OnOpt1;
-            @Opt1.canceled += instance.OnOpt1;
-            @Opt2.started += instance.OnOpt2;
-            @Opt2.performed += instance.OnOpt2;
-            @Opt2.canceled += instance.OnOpt2;
-            @Opt3.started += instance.OnOpt3;
-            @Opt3.performed += instance.OnOpt3;
-            @Opt3.canceled += instance.OnOpt3;
-            @Opt4.started += instance.OnOpt4;
-            @Opt4.performed += instance.OnOpt4;
-            @Opt4.canceled += instance.OnOpt4;
+            @Continue.started += instance.OnContinue;
+            @Continue.performed += instance.OnContinue;
+            @Continue.canceled += instance.OnContinue;
+            @SelectNext.started += instance.OnSelectNext;
+            @SelectNext.performed += instance.OnSelectNext;
+            @SelectNext.canceled += instance.OnSelectNext;
+            @SelectPrevious.started += instance.OnSelectPrevious;
+            @SelectPrevious.performed += instance.OnSelectPrevious;
+            @SelectPrevious.canceled += instance.OnSelectPrevious;
         }
 
         private void UnregisterCallbacks(IPrimaryActions instance)
         {
-            @Next.started -= instance.OnNext;
-            @Next.performed -= instance.OnNext;
-            @Next.canceled -= instance.OnNext;
-            @Opt1.started -= instance.OnOpt1;
-            @Opt1.performed -= instance.OnOpt1;
-            @Opt1.canceled -= instance.OnOpt1;
-            @Opt2.started -= instance.OnOpt2;
-            @Opt2.performed -= instance.OnOpt2;
-            @Opt2.canceled -= instance.OnOpt2;
-            @Opt3.started -= instance.OnOpt3;
-            @Opt3.performed -= instance.OnOpt3;
-            @Opt3.canceled -= instance.OnOpt3;
-            @Opt4.started -= instance.OnOpt4;
-            @Opt4.performed -= instance.OnOpt4;
-            @Opt4.canceled -= instance.OnOpt4;
+            @Continue.started -= instance.OnContinue;
+            @Continue.performed -= instance.OnContinue;
+            @Continue.canceled -= instance.OnContinue;
+            @SelectNext.started -= instance.OnSelectNext;
+            @SelectNext.performed -= instance.OnSelectNext;
+            @SelectNext.canceled -= instance.OnSelectNext;
+            @SelectPrevious.started -= instance.OnSelectPrevious;
+            @SelectPrevious.performed -= instance.OnSelectPrevious;
+            @SelectPrevious.canceled -= instance.OnSelectPrevious;
         }
 
         public void RemoveCallbacks(IPrimaryActions instance)
@@ -333,10 +253,8 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
     public PrimaryActions @Primary => new PrimaryActions(this);
     public interface IPrimaryActions
     {
-        void OnNext(InputAction.CallbackContext context);
-        void OnOpt1(InputAction.CallbackContext context);
-        void OnOpt2(InputAction.CallbackContext context);
-        void OnOpt3(InputAction.CallbackContext context);
-        void OnOpt4(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
+        void OnSelectNext(InputAction.CallbackContext context);
+        void OnSelectPrevious(InputAction.CallbackContext context);
     }
 }

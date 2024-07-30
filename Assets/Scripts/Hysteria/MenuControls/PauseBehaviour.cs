@@ -10,7 +10,7 @@ namespace Hysteria.MenuControls
 {
     public class PauseBehaviour : MonoBehaviour
     {
-        private Canvas UI;
+        [SerializeField] private Canvas UI;
         [SerializeField, Scene] private List<int> bannedScenes = new List<int>();
         private MenuControlMap ControlMap;
         

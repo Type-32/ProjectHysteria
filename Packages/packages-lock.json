@@ -1,5 +1,18 @@
 {
   "dependencies": {
+    "com.bottinogames.samity": {
+      "version": "https://github.com/bottinogames/com.bottinogames.samity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "7b8a214b4c89728e57453f9af14cb8eb06a46051"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "1.8.16",
       "depth": 1,
