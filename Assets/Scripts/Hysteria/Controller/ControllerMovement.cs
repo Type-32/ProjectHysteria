@@ -1,5 +1,6 @@
 using System;
 using Cinemachine;
+using Hysteria.MenuControls;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -58,6 +59,8 @@ namespace Hysteria.Controller
 
         void Update()
         {
+            if (PauseBehaviour.Instance.Paused) return;
+            
             _smoothInput = Vector2.Lerp(_smoothInput, _directInput, Time.deltaTime * 9);
 
             float horizontalInput = _smoothInput.x;
@@ -107,6 +110,7 @@ namespace Hysteria.Controller
 
         private void FixedUpdate()
         {
+            if (PauseBehaviour.Instance.Paused) return;
             MoveCharacter();
             // Debug.Log(_smoothInput);
         }
