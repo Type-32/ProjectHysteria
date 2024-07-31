@@ -25,7 +25,6 @@ namespace Hysteria.Dialog
         [SerializeField] private Text titleElement;
         [SerializeField] private Text contentElement;
         [SerializeField] private Image spriteElement;
-        [SerializeField] private Slider timerElement;
         [SerializeField] private RectTransform optionsHolder;
 
         [Title("References")] [SerializeField] private GameObject buttonPrefab;
@@ -81,17 +80,17 @@ namespace Hysteria.Dialog
             optionsHolder.gameObject.SetActive(false);
         }
 
-        private void Update()
-        {
-            if (InConversation)
-            {
-                // Update timer if needed
-                if (timerElement)
-                {
-                    if(timerElement.value > 0) timerElement.value -= Time.deltaTime;
-                }
-            }
-        }
+        // private void Update()
+        // {
+        //     if (InConversation)
+        //     {
+        //         // Update timer if needed
+        //         // if (timerElement)
+        //         // {
+        //         //     if(timerElement.value > 0) timerElement.value -= Time.deltaTime;
+        //         // }
+        //     }
+        // }
 
         protected void OnDialogIndexChanged(int from, int to)
         {

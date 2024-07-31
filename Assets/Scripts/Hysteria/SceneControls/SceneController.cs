@@ -11,14 +11,13 @@ namespace Hysteria.SceneControls
     public class SceneController : Singleton<SceneController>
     {
         [SerializeField, Scene] private string transitionSceneName;
-        [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private List<Canvas> refreshCanvasCameras = new();
         private float _loadingProgress = 0f;
         public float LoadingProgress => _loadingProgress;
         
         public bool IsLoading { get; private set; }
 
-        private bool _startFade = false;
+        [HideInInspector] public bool _startFade = false;
 
         protected void Start()
         {
@@ -90,12 +89,6 @@ namespace Hysteria.SceneControls
             RefreshAllCanvasesCameras();
             
             IsLoading = false;
-        }
-
-        private void FixedUpdate()
-        {
-            if(_startFade)
-                canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0, Time.fixedDeltaTime * 6);
         }
 
         public float GetLoadingProgress()

@@ -17,6 +17,8 @@ namespace Hysteria.Dialog
         
         [Title("Configuration")]
         [ValueDropdown("GetConversationValues"), SerializeField] protected int selectedConversation;
+
+        [SerializeField] protected ConversationObject selectedConversationObject;
         [SerializeField] protected bool triggersOneTime = true;
         
         [Title("Events", "For other purposes, i.e. monitoring what happened after continuing the dialog")]
@@ -37,9 +39,10 @@ namespace Hysteria.Dialog
 
             return temp;
         }
-        public void TriggerConv()
+        public void TriggerConversation()
         {
-            ConversationTrafficBehaviour.Instance.InvokeConversation(selectedConversation, afterConversationTriggered);
+            if (useDialogObject) ConversationTrafficBehaviour.Instance.InvokeConversation(selectedConversationObject, afterConversationTriggered);
+            else ConversationTrafficBehaviour.Instance.InvokeConversation(selectedConversation, afterConversationTriggered);
             onConversationTriggered?.Invoke();
         }
 
@@ -48,7 +51,7 @@ namespace Hysteria.Dialog
             if (!useCollision) return;
             
             if (_triggeredLock && triggersOneTime) return;
-            TriggerConv();
+            TriggerConversation();
             _triggeredLock = true;
         }
 
@@ -57,7 +60,7 @@ namespace Hysteria.Dialog
             if (!useCollision) return;
             
             if (_triggeredLock && triggersOneTime) return;
-            TriggerConv();
+            TriggerConversation();
             _triggeredLock = true;
         }
 
@@ -73,7 +76,7 @@ namespace Hysteria.Dialog
 
         public void Interact()
         {
-            
+            TriggerConversation();
         }
 
         public bool IsInteractable()

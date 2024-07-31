@@ -73,7 +73,7 @@ namespace Hysteria.Controller
             }
 
             // Store last non-zero movement for top-down rotation when stationary
-            if (!_directInput.Equals(Vector2.zero))
+            if (!isFirstPersonMode && !_directInput.Equals(Vector2.zero))
             {
                 lastNonZeroMovement = movement;
             }
@@ -95,7 +95,7 @@ namespace Hysteria.Controller
 
                 verticalRotation -= mouseY;
                 verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
-                firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+                firstPersonCamera.transform.rotation = Quaternion.Euler(verticalRotation, 0f, 0f);
             }
             else
             {
