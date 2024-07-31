@@ -38,6 +38,7 @@ namespace Hysteria.Dialog
         private UnityEvent _cachedAfterEvent;
 
         private int _dialogDataIndex = -1;
+        private List<DialogData> _cachedDialogData = new();
 
         private static ConversationTrafficBehaviour _instance;
 
@@ -126,8 +127,13 @@ namespace Hysteria.Dialog
                     Button button = Instantiate(buttonPrefab, optionsHolder).GetComponent<Button>();
                     button.onClick.AddListener(() =>
                     {
-                        OnSelectOption?.Invoke(optionSet, index++);
-                        ContinueConversation(true);
+                        if(optionSet.options[index].responseType == DialogOptionResponseType.ContinueDialog)
+                            ContinueConversation(true);
+                        else if(optionSet.options[index].responseType == DialogOptionResponseType.EndDialog)
+                            ExitConversation();
+                        else if(optionSet.options[index].responseType == DialogOptionResponseType.CustomInteraction)
+                            OnSelectOption?.Invoke(optionSet, index++);
+                            
                     });
                     Text text = button.gameObject.GetComponentInChildren<Text>();
                     text.text = opt.optionText;
@@ -200,6 +206,12 @@ namespace Hysteria.Dialog
             if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
             {
                 _dialogDataIndex++;
+                if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
+                    _cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
+                    OnPerformSelectNext(context);
+                else if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
+                         !_cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
+                    _cachedDialogData.Add(_currentConversationObject.Dialogs[_dialogDataIndex]);
                 UpdateDialogUI();
             }
             else

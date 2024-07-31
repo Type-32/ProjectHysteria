@@ -15,5 +15,7 @@ MonoBehaviour:
   options:
   - optionText: Talk
     isSpecial: 0
+    responseType: 0
   - optionText: Interact
     isSpecial: 1
+    responseType: 0

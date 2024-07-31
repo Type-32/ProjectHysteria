@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/ReadMeBeforeYouDoAnything.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/ReadMeBeforeYouDoAnything.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionResponseType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionResponseType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Prefabs/Lantern07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Prefabs/Lantern07.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Prefabs/StoneLantern02_v3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Prefabs/StoneLantern02_v3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/Terrain_0_0_77c590a1-6a11-4dc5-b5e9-c95e387c351e.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/Terrain_0_0_77c590a1-6a11-4dc5-b5e9-c95e387c351e.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +132,7 @@
       <workItem from="1722177487751" duration="20234000" />
       <workItem from="1722286296404" duration="13877000" />
       <workItem from="1722381360280" duration="18209000" />
-      <workItem from="1722439838585" duration="6788000" />
+      <workItem from="1722439838585" duration="9728000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
