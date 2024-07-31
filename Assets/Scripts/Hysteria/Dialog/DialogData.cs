@@ -9,13 +9,12 @@ namespace Hysteria.Dialog
     [Serializable]
     public class DialogData
     {
-        [Title("Dialog")]
-        public DialogCharacterObject Character;
-        [ResizableTextArea, TextArea(5, 10)] public string CharacterContent = "";
-        
-        [Title("Options")]
         [EnumToggleButtons]
         public DialogType DialogType = DialogType.SimpleResponse;
+        
+        [Title("Dialog"), Sirenix.OdinInspector.HideIf("DialogType", DialogType.MultiResponse)]
+        public DialogCharacterObject Character;
+        [ResizableTextArea, TextArea(5, 10), Sirenix.OdinInspector.HideIf("DialogType", DialogType.MultiResponse)] public string CharacterContent = "";
         
         [Sirenix.OdinInspector.ShowIf("DialogType", DialogType.MultiResponse)]
         public DialogOptionSet options;

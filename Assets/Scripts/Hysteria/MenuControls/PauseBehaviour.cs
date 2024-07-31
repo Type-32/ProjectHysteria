@@ -36,6 +36,11 @@ namespace Hysteria.MenuControls
             ControlMap = new MenuControlMap();
         }
 
+        private void Start()
+        {
+            RefreshState();
+        }
+
         private void OnEnable()
         {
             ControlMap.Enable();

@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace Hysteria.Controller
@@ -12,10 +13,10 @@ namespace Hysteria.Controller
     public class ControllerInteractionManager : ControllerComponent
     {
         [Sirenix.OdinInspector.MinValue(0f), Sirenix.OdinInspector.MaxValue(5f)]
-        public float interactionRange = 1f;
+        protected float detectionRange = 3f, interactingRange = 1f;
 
         [Tag]
-        public string lookForTag = "";
+        protected string lookForTag = "";
         
         [CanBeNull]
         public IInteractableObject SelectedObject
@@ -29,8 +30,8 @@ namespace Hysteria.Controller
         private void FixedUpdate()
         {
             IInteractableObject closestObject = null;
-            float distance = interactionRange + 1;
-            foreach (var c in GetVisibleCollidersInSphere(transform.position, interactionRange))
+            float distance = detectionRange;
+            foreach (var c in GetVisibleCollidersInSphere(transform.position, detectionRange))
             {
                 float temp = Vector3.Distance(c.transform.position, transform.position);
                 
@@ -41,7 +42,7 @@ namespace Hysteria.Controller
                     closestObject = c.gameObject.GetComponent<IInteractableObject>();
                 }
             }
-
+            
             SelectedObject = closestObject;
         }
         
@@ -68,6 +69,11 @@ namespace Hysteria.Controller
 
             cachedColliders = visibleColliders;
             return visibleColliders;
+        }
+
+        public void InteractSelectedObject()
+        {
+            SelectedObject?.Interact();
         }
     }
 }

@@ -27,6 +27,8 @@ namespace Hysteria.Dialog
         [SerializeField] private Image spriteElement;
         [SerializeField] private RectTransform optionsHolder;
 
+        [SerializeField] private RectTransform spriteHolder;
+
         [Title("References")] [SerializeField] private GameObject buttonPrefab;
 
         private ConversationControls _map;
@@ -111,6 +113,7 @@ namespace Hysteria.Dialog
             
             if (isMultiResponse)
             {
+                dialogBG.gameObject.SetActive(false);
                 optionsHolder.gameObject.SetActive(true);
                 DialogOptionSet optionSet = currentDialog.options;
                 foreach (var i in _options)
@@ -124,14 +127,15 @@ namespace Hysteria.Dialog
                     button.onClick.AddListener(() =>
                     {
                         OnSelectOption?.Invoke(optionSet, index++);
-                        ContinueConversation();
+                        ContinueConversation(true);
                     });
-                    Text text = button.GetComponentInChildren<Text>();
+                    Text text = button.gameObject.GetComponentInChildren<Text>();
                     text.text = opt.optionText;
 
                     if (opt.isSpecial)
                     {
                         button.image.color = new Color(1, 0, 0, 0);
+                        text.color = Color.red;
                     }
                     
                     _options.Add(button);
@@ -139,10 +143,13 @@ namespace Hysteria.Dialog
             }
             else
             {
-                optionsHolder.gameObject.SetActive(true);
-                titleElement.text = currentDialog.Character.CharacterName;
+                dialogBG.gameObject.SetActive(true);
+                optionsHolder.gameObject.SetActive(false);
+                bool strNull = string.IsNullOrEmpty(currentDialog.Character.CharacterName);
+                titleElement.text = strNull ? "     " : currentDialog.Character.CharacterName;
                 contentElement.text = currentDialog.CharacterContent;
                 spriteElement.sprite = currentDialog.Character.CharacterSprite;
+                spriteHolder.gameObject.SetActive(currentDialog.Character.CharacterSprite);
             }
         }
 
@@ -208,9 +215,10 @@ namespace Hysteria.Dialog
             
         }
 
-        public void ContinueConversation()
+        public void ContinueConversation(bool forceContinue = false)
         {
             if (!InConversation) return;
+            if (_currentConversationObject.Dialogs[_dialogDataIndex].DialogType == DialogType.MultiResponse && !forceContinue) return;
 
             if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
             {

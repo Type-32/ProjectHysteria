@@ -229,7 +229,7 @@ namespace Hysteria.Controller
                     ""name"": ""CameraLook"",
                     ""type"": ""Value"",
                     ""id"": ""448a83bc-5213-47d7-a1da-2378f6fc91ff"",
-                    ""expectedControlType"": ""Analog"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true

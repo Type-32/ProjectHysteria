@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Hysteria.Interface
 {
     public interface IInteractableObject
@@ -6,6 +8,7 @@ namespace Hysteria.Interface
         public void Interact();
         public bool IsInteractable();
         public bool InteractedOneTime();
+        public GameObject GetGameObject();
     }
 
     public interface IInteractableObject<T> : IInteractableObject

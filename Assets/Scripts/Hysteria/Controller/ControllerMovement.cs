@@ -58,7 +58,8 @@ namespace Hysteria.Controller
 
         void Update()
         {
-            
+            _smoothInput = Vector2.Lerp(_smoothInput, _directInput, Time.deltaTime * 9);
+
             float horizontalInput = _smoothInput.x;
             float verticalInput = _smoothInput.y;
 
@@ -88,6 +89,7 @@ namespace Hysteria.Controller
             // Handle rotation in first-person mode
             if (isFirstPersonMode)
             {
+                // Debug.Log(_directLookInput);
                 float mouseX = _directLookInput.x * mouseSensitivity;
                 float mouseY = _directLookInput.y * mouseSensitivity;
 
@@ -95,7 +97,7 @@ namespace Hysteria.Controller
 
                 verticalRotation -= mouseY;
                 verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
-                firstPersonCamera.transform.rotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+                firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
             }
             else
             {
@@ -111,8 +113,6 @@ namespace Hysteria.Controller
 
         private void MoveCharacter()
         {
-            _smoothInput = Vector2.Lerp(_smoothInput, _directInput, Time.fixedDeltaTime * 9);
-
             if (_directInput.Equals(Vector2.zero) && (_smoothInput.x <= 0.05 || _smoothInput.y <= 0.05))
                 _smoothInput = Vector2.zero;
             
@@ -172,7 +172,10 @@ namespace Hysteria.Controller
         private void OnPerformMovement(InputAction.CallbackContext ctx)
         {
             _directInput = ctx.ReadValue<Vector2>();
-            // Debug.Log("In " + _directInput);
+            if (!isFirstPersonMode)
+            {
+                lastNonZeroMovement = movement;
+            }
         }
 
         private void OnCancelMovement(InputAction.CallbackContext ctx)

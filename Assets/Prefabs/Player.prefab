@@ -5196,6 +5196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hooded 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7876023681238672744, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 4.9113464
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

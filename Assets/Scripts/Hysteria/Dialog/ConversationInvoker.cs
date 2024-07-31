@@ -15,14 +15,15 @@ namespace Hysteria.Dialog
         [SerializeField] protected bool useDialogObject = false;
         [SerializeField] protected bool isInteractable = true;
         
-        [Title("Configuration")]
+        [Title("Configuration"), Sirenix.OdinInspector.HideIf("useDialogObject")]
         [ValueDropdown("GetConversationValues"), SerializeField] protected int selectedConversation;
 
-        [SerializeField] protected ConversationObject selectedConversationObject;
+        [SerializeField, Title("Configuration"), Sirenix.OdinInspector.ShowIf("useDialogObject")] protected ConversationObject selectedConversationObject;
         [SerializeField] protected bool triggersOneTime = true;
-        
+
         [Title("Events", "For other purposes, i.e. monitoring what happened after continuing the dialog")]
-        [SerializeField] private UnityEvent onConversationTriggered, afterConversationTriggered;
+        [SerializeField] private UnityEvent onConversationTriggered;
+        [SerializeField] private UnityEvent afterConversationTriggered;
 
         private bool _triggeredLock = false;
         
@@ -87,6 +88,11 @@ namespace Hysteria.Dialog
         public bool InteractedOneTime()
         {
             return _triggeredLock;
+        }
+
+        public GameObject GetGameObject()
+        {
+            return gameObject;
         }
     }
 }

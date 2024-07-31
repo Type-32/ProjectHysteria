@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: TalkOrInteract
   m_EditorClassIdentifier: 
   options:
-  - Talk
-  - Interact
+  - optionText: Talk
+    isSpecial: 0
+  - optionText: Interact
+    isSpecial: 1
