@@ -5,46 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/EventSystemListenerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EventSystemListenerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GlobalAudioSource.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GlobalAudioSource.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneControllerManager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneControllerManager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestMultiResponse.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestMultiResponse.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/UI/ButtonSoundPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/UI/ButtonSoundPlayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Utility/SerializedSingleton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Utility/SerializedSingleton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HUD.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HUD.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/TracerTracker.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/TracerTracker.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/StoneTilesDirt.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/StoneTilesDirt.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/Terrain_0_0_77c590a1-6a11-4dc5-b5e9-c95e387c351e.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/Terrain/Terrain_0_0_77c590a1-6a11-4dc5-b5e9-c95e387c351e.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox02 night.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox02 night.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChineseAssetpackSpicySushiGames/skybox03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script Objects/Options/TalkOrInteract.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script Objects/Options/TalkOrInteract.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInputMap.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/MenuControls/PauseBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/MenuControls/PauseBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP-PSX Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP-PSX Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +131,7 @@
       <workItem from="1722177487751" duration="20234000" />
       <workItem from="1722286296404" duration="13877000" />
       <workItem from="1722381360280" duration="18209000" />
-      <workItem from="1722439838585" duration="3985000" />
+      <workItem from="1722439838585" duration="5889000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
