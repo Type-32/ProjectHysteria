@@ -4,86 +4,552 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerAnimator.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerAnimator.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaterial.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaterial.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/hooded 1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/hooded 1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/hoodedtexture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/hoodedtexture.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SAM Voices.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SAM Voices/Warning.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SAM Voices/Warning.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SamSpeakerInvoker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SamSpeakerInvoker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Signals.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Signals/ReadWarnings.signal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Signals/ReadWarnings.signal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines/LoadingSceneTimeline.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines/LoadingSceneTimeline.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines/WarningSceneTimeline.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines/WarningSceneTimeline.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestConv.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestConv.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Dialogs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/TestDialo.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/TestDialo.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/CustomButton.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/CustomButton.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/CustomRedButton.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/CustomRedButton.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/buttonbg 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Animators/buttonbg 1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RooftopComponent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RooftopComponent.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RooftopLeftNobottomComponent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/RooftopLeftNobottomComponent.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Roofttop.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Roofttop.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Roofttop2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Roofttop2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/OpeningDialog.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Conversations/OpeningDialog.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/Narrative.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/Narrative.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Options.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Options/TalkOrInteract.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script Objects/Options/TalkOrInteract.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/CHANGELOG.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Documentation.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Documentation.url.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/AssetInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/AssetInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/HelpWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/HelpWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/AlignToWavesInspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/AlignToWavesInspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/PlanarReflectionRendererInspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/PlanarReflectionRendererInspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/RenderFeatureEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/RenderFeatureEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterGridInspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterGridInspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterObjectInspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterObjectInspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterShaderImporterEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Inspectors/WaterShaderImporterEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/MaterialUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/MaterialUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Resources/water-object-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Resources/water-object-icon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Resources/water-shader-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/Resources/water-shader-icon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/ShaderConfigurator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/ShaderConfigurator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/StylizedWaterEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/StylizedWaterEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/UI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/UI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/WaterMeshImporter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/WaterMeshImporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/WaterShaderImporter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/WaterShaderImporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/sc.stylizedwater2.editor.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Editor/sc.stylizedwater2.editor.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/SplashParticle.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/SplashParticle.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/SplashParticle_Up.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/SplashParticle_Up.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/CrestSplash_AlbedoAlpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/CrestSplash_AlbedoAlpha.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/CrestSplash_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/CrestSplash_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterMist_5x5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterMist_5x5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterMist_5x5_normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterMist_5x5_normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterRipple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterRipple.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterRipple_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterRipple_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashCircle_5x5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashCircle_5x5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashCircle_5x5_normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashCircle_5x5_normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashUp_6x6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashUp_6x6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashUp_6x6_normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplashUp_6x6_normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplash_6x6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplash_6x6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplash_6x6_normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterSplash_6x6_normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterfallSplash_5x5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterfallSplash_5x5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterfallSplash_5x5_normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/Textures/WaterfallSplash_5x5_normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterCircle.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterCircle.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterMistParticle.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterMistParticle.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterRipple.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterRipple.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterfallSplashParticle.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaterfallSplashParticle.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaveCrestSplash.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Effects/WaveCrestSplash.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Clear.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Clear.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Desktop.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Desktop.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Frozen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Frozen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Lava.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Lava.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_LavaFlow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_LavaFlow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Lowpoly.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Lowpoly.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Mobile.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Mobile.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Murky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Murky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Ocean.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Ocean.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Realistic.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Realistic.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_River.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_River.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Smooth.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Smooth.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Swamp.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Swamp.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Toon.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_Toon.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_ToxicGoop.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/StylizedWater2_ToxicGoop.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Caustics.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Caustics/Caustics_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Caustics/Caustics_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Caustics/Caustics_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Caustics/Caustics_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Foam1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Foam1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Foam2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Foam2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/FoamSea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/FoamSea.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Intersection_Foam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/Intersection_Foam.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/WaterfallFoam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/WaterfallFoam.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/WindwakerFoam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Foam/WindwakerFoam.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/IntersectionNoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/IntersectionNoise.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/RoughWaves.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/RoughWaves.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/SharpWaves.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/SharpWaves.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/SmoothWaves.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/SmoothWaves.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/StreamWaves.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/Textures/Normals/StreamWaves.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/WaterTransparencyMask.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Materials/WaterTransparencyMask.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Circle.watermesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Circle.watermesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Plane.watermesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Plane.watermesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Plane_wNoise.watermesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/HighPoly_Plane_wNoise.watermesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/LowPoly_Plane.watermesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/LowPoly_Plane.watermesh.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/SW2_ParticleMeshes.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Models/SW2_ParticleMeshes.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/BigSplash.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/BigSplash.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/RiverMouth.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/RiverMouth.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterRipples_Stationairy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterRipples_Stationairy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterRipples_Trail.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterRipples_Trail.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Collision.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Collision.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Ring.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Ring.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_SeaCliffCollision.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_SeaCliffCollision.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Trail.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Trail.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Up.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterSplash_Up.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterfallMist.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterfallMist.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterfallSplash.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/WaterfallSplash.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/Wave Crest Splash.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/Effects/Wave Crest Splash.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater2_Ocean.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater2_Ocean.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Desktop.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Desktop.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Lowpoly.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Lowpoly.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Mobile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Mobile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Toon.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Prefabs/StylizedWater_Toon.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Quickstart.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Quickstart.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/AlignToWaves.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/AlignToWaves.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Buoyancy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Buoyancy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/PipelineUtilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/PipelineUtilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/DisplacementPrePass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/DisplacementPrePass.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/PlanarReflectionRenderer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/PlanarReflectionRenderer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/SetupConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/SetupConstants.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/StylizedWaterRenderFeature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/Rendering/StylizedWaterRenderFeature.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/StylizedWaterDataProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/StylizedWaterDataProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterGrid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterGrid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterMesh.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterMesh.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaterObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaveParameters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/WaveParameters.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/sc.stylizedwater2.runtime.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Runtime/sc.stylizedwater2.runtime.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Caustics.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Caustics.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Common.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Common.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Displacement.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Displacement.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Features.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Features.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Foam.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Foam.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Fog.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Fog.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/ForwardPass.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/ForwardPass.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Input.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Input.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Lighting.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Lighting.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Reflections.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Reflections.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Tesselation.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Tesselation.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Vertex.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Vertex.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Waves.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/Libraries/Waves.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/StylizedWater2_Standard.watershader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/StylizedWater2_Standard.watershader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Readme.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Sample Water Height.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Sample Water Height.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Sample Water Normal.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/SubGraphs/Sample Water Normal.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/WaterCutoutMask.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/Shaders/WaterCutoutMask.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Barrel.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Barrel.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/FagaceaeBillboard.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/FagaceaeBillboard.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SW2_BackdropTerrain.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SW2_BackdropTerrain.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoCliff.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoCliff.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoCrate.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoCrate.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoFoliageShader.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoFoliageShader.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoGrass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoGrass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoLogRaft.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoLogRaft.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBaby.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBaby.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBark.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBark.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBranch.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPalmBranch.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPier.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoPier.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoRock.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoRock.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoTerrain.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_DemoTerrain.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_Shrub.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/SWS_Shrub.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Noon.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Noon.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Sunset.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Sunset.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Sunset.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox Sunset.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_DemoSkybox.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo_DioramaSide.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo_DioramaSide.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo_DioramaTop.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_Demo_DioramaTop.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_RiverDemo.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/StylizedWater2_RiverDemo.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/FagaceaeImpostor_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/FagaceaeImpostor_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/FagaceaeImpostor_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/FagaceaeImpostor_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/GrassBillboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/GrassBillboard.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SW2_BackdropTerrain Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SW2_BackdropTerrain Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Cliff_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Cliff_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Cliff_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Cliff_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoBarrelDiffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoBarrelDiffuse.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalmBranch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalmBranch.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalmBranch_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalmBranch_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalm_Bark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalm_Bark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalm_Bark_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_DemoPalm_Bark_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_LogRaft_Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_LogRaft_Diffuse.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_LogRaft_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_LogRaft_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_PierAlbedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_PierAlbedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_PierNormals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_PierNormals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Rocks_diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Rocks_diffuse.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Rocks_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_Rocks_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_WoodenCrate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/SWS_WoodenCrate.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/Shrub_BranchCluster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Materials/Textures/Shrub_BranchCluster.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/DioramaWater.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/DioramaWater.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SGS_DemoCliff.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SGS_DemoCliff.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SGS_DemoRock.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SGS_DemoRock.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SW2_BackgroundTerrain.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SW2_BackgroundTerrain.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SW2_GrassPatch.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SW2_GrassPatch.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoPalmBaby.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoPalmBaby.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoPalmTree.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoPalmTree.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoProps.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_DemoProps.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_Shrub.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Models/SWS_Shrub.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SW2_GrassPatch.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SW2_GrassPatch.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Barrel.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Barrel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Cliff.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Cliff.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPalmBaby.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPalmBaby.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPalmTree.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPalmTree.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPier.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoPier.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoRock.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_DemoRock.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_LogRaft.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_LogRaft.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Shrub.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_Shrub.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_WoodenCrate.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Prefabs/SWS_WoodenCrate.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/SWS_LUT_v2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/SWS_LUT_v2.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/SWS_PostProcessingProfile_URP.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/SWS_PostProcessingProfile_URP.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_DemoRiverBed.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_DemoRiverBed.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_DemoRock.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_DemoRock.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_Grass.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_Grass.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_OceanFloor.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_OceanFloor.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_OceanFloorSmooth.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_OceanFloorSmooth.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_SandRough.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_SandRough.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_SandWet.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_SandWet.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_Seaweed.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/Layers/SWS_Seaweed.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoGrass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoGrass.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverBed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverBed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverBed_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverBed_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverTerrain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRiverTerrain.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoRock_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSand.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSand_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSand_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed_Normals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoSeaweed_Normals.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoTerrain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DemoTerrain.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DioramaTerrain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_DioramaTerrain.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Diffuse.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Smooth_Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Smooth_Diffuse.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Smooth_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/DemoAssets/Terrain/SWS_OceanFloor_Smooth_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/Diorama.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/Diorama.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/Diorama.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/Diorama/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/Diorama/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/ParticleShowcase/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/ReflectionProbe-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/ReflectionProbe-0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/ReflectionProbe-1.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/RiverDemo/ReflectionProbe-1.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo/StylizedWaterDemo Lighting Settings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/StylizedWaterDemo/StylizedWaterDemo Lighting Settings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/_Demo/WavesExample/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StylizedWater2/package.json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/0_FailMtBottom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/0_FailMtBottom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/0_MtBottom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/0_MtBottom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/1_FailMtMid.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/1_FailMtMid.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/1_MtMid.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/1_MtMid.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/2_FailMtTop.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/2_FailMtTop.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/2_MtTop.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/2_MtTop.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Timelines/WarningSceneTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Timelines/WarningSceneTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestConv.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script Objects/Conversations/TestConv.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/TestDialo.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script Objects/Dialogs/TestDialo.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4781720344047_.pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4781720344047_.pic.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4791720344047_.pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4791720344047_.pic.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4801720344048_.pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/4801720344048_.pic.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationRemoteBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationRemoteBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationInvoker.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogCharacterObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogCharacterObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Sisyphus.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Sisyphus.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Sisyphus_Success.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Sisyphus_Success.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Zeus.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Zeus.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Zeus_Success.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/Zeus_Success.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/MenuControls/PauseBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/MenuControls/PauseBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/DialogOptionSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/OpeningConv.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/OpeningConv.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/WechatIMG481.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/WechatIMG481.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/SceneControls/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/SceneControls/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/SceneControls/TransitionScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/SceneControls/TransitionScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP-PSX Main Menu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP-PSX Main Menu.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestGrass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestGrass.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +580,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bottinogames.samity@7b8a214b4c/Samity/Components/SamSpeaker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/dd/92dba3df/Color.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -196,7 +663,8 @@
       <option name="presentableId" value="Default" />
       <updated>1681255876745</updated>
       <workItem from="1722177487751" duration="20234000" />
-      <workItem from="1722286296404" duration="9625000" />
+      <workItem from="1722286296404" duration="13877000" />
+      <workItem from="1722381360280" duration="8443000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
@@ -222,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722199362331</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed Many">
+      <option name="closed" value="true" />
+      <created>1722366575566</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722366575566</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +719,8 @@
     <MESSAGE value="INIT COMMIT" />
     <MESSAGE value="Force Based Rigidbody Controller" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Changed Many" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Many" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

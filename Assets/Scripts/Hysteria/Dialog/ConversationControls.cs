@@ -53,6 +53,15 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CancelChoices"",
+                    ""type"": ""Button"",
+                    ""id"": ""04d167a0-8551-48a8-8d66-74f18400df61"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -121,6 +130,28 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
                     ""action"": ""SelectPrevious"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ffd30db0-392e-412b-baf0-39af88921268"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CancelChoices"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5681598b-edb5-482e-acb7-22cd4e8ca296"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CancelChoices"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -132,6 +163,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
         m_Primary_Continue = m_Primary.FindAction("Continue", throwIfNotFound: true);
         m_Primary_SelectNext = m_Primary.FindAction("SelectNext", throwIfNotFound: true);
         m_Primary_SelectPrevious = m_Primary.FindAction("SelectPrevious", throwIfNotFound: true);
+        m_Primary_CancelChoices = m_Primary.FindAction("CancelChoices", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -196,6 +228,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Primary_Continue;
     private readonly InputAction m_Primary_SelectNext;
     private readonly InputAction m_Primary_SelectPrevious;
+    private readonly InputAction m_Primary_CancelChoices;
     public struct PrimaryActions
     {
         private @ConversationControls m_Wrapper;
@@ -203,6 +236,7 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
         public InputAction @Continue => m_Wrapper.m_Primary_Continue;
         public InputAction @SelectNext => m_Wrapper.m_Primary_SelectNext;
         public InputAction @SelectPrevious => m_Wrapper.m_Primary_SelectPrevious;
+        public InputAction @CancelChoices => m_Wrapper.m_Primary_CancelChoices;
         public InputActionMap Get() { return m_Wrapper.m_Primary; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -221,6 +255,9 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
             @SelectPrevious.started += instance.OnSelectPrevious;
             @SelectPrevious.performed += instance.OnSelectPrevious;
             @SelectPrevious.canceled += instance.OnSelectPrevious;
+            @CancelChoices.started += instance.OnCancelChoices;
+            @CancelChoices.performed += instance.OnCancelChoices;
+            @CancelChoices.canceled += instance.OnCancelChoices;
         }
 
         private void UnregisterCallbacks(IPrimaryActions instance)
@@ -234,6 +271,9 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
             @SelectPrevious.started -= instance.OnSelectPrevious;
             @SelectPrevious.performed -= instance.OnSelectPrevious;
             @SelectPrevious.canceled -= instance.OnSelectPrevious;
+            @CancelChoices.started -= instance.OnCancelChoices;
+            @CancelChoices.performed -= instance.OnCancelChoices;
+            @CancelChoices.canceled -= instance.OnCancelChoices;
         }
 
         public void RemoveCallbacks(IPrimaryActions instance)
@@ -256,5 +296,6 @@ public partial class @ConversationControls: IInputActionCollection2, IDisposable
         void OnContinue(InputAction.CallbackContext context);
         void OnSelectNext(InputAction.CallbackContext context);
         void OnSelectPrevious(InputAction.CallbackContext context);
+        void OnCancelChoices(InputAction.CallbackContext context);
     }
 }

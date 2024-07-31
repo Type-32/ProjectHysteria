@@ -10,15 +10,14 @@ namespace Hysteria.Dialog
     public class DialogData
     {
         [Title("Dialog")]
-        [AssetSelector(Filter = "p: t:DialogCharacterObject")] public DialogCharacterObject Character;
+        public DialogCharacterObject Character;
         [ResizableTextArea, TextArea(5, 10)] public string CharacterContent = "";
         
         [Title("Options")]
         [EnumToggleButtons]
         public DialogType DialogType = DialogType.SimpleResponse;
-        public bool UseRightBackground = false;
         
-        [NaughtyAttributes.ShowIf("DialogType", DialogType.MultiResponse), AssetSelector(Filter = "p: t:DialogOptionSet")]
+        [Sirenix.OdinInspector.ShowIf("DialogType", DialogType.MultiResponse)]
         public DialogOptionSet options;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Hysteria.Utility;
@@ -10,11 +11,19 @@ namespace Hysteria.SceneControls
     public class SceneController : Singleton<SceneController>
     {
         [SerializeField, Scene] private string transitionSceneName;
+        [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private List<Canvas> refreshCanvasCameras = new();
         private float _loadingProgress = 0f;
         public float LoadingProgress => _loadingProgress;
         
         public bool IsLoading { get; private set; }
+
+        private bool _startFade = false;
+
+        protected void Start()
+        {
+            RefreshAllCanvasesCameras();
+        }
 
         public void LoadScene(string sceneName, bool useTransition = true)
         {
@@ -69,14 +78,24 @@ namespace Hysteria.SceneControls
 
             // Unload the initial scene
             yield return SceneManager.UnloadSceneAsync(initialScene);
-            
+
+            _startFade = true;
             yield return new WaitForSeconds(2);
 
             // Unload the transition scene
             yield return SceneManager.UnloadSceneAsync(transitionSceneName);
 
             _loadingProgress = 1f;
+
+            RefreshAllCanvasesCameras();
+            
             IsLoading = false;
+        }
+
+        private void FixedUpdate()
+        {
+            if(_startFade)
+                canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0, Time.fixedDeltaTime * 6);
         }
 
         public float GetLoadingProgress()
@@ -97,6 +116,17 @@ namespace Hysteria.SceneControls
         public int GetCurrentSceneBuildIndex()
         {
             return SceneManager.GetActiveScene().buildIndex;
+        }
+
+        public void RefreshAllCanvasesCameras()
+        {
+            Canvas[] canvases = FindObjectsOfType<Canvas>();
+            foreach (var c in canvases)
+            {
+                c.worldCamera = Camera.main;
+            }
+            
+            Debug.Log("Refreshed All Canvas Cameras!");
         }
     }
 }

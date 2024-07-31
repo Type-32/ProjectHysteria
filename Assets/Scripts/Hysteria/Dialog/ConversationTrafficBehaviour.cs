@@ -2,40 +2,37 @@ using System;
 using System.Collections.Generic;
 using Hysteria.Controller;
 using NaughtyAttributes;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Hysteria.Dialog
 {
     public class ConversationTrafficBehaviour : MonoBehaviour
     {
+        public delegate void SelectedOptionCallback(DialogOptionSet set, int selectedIndex);
+        
         [ShowNonSerializedField] private ControllerManager Controller;
         public List<ConversationObject> Conversations = new();
         [ShowNonSerializedField] private int CurrentConversation = -1;
         
-        [Space]
+        [Title("Dialog References")]
         [SerializeField] private GameObject holder;
-        [SerializeField] private RectTransform leftBG, rightBG;
-        [SerializeField] private Text leftTitleElement, leftContentElement;
-        [SerializeField] private Image leftSpriteElement;
-        [SerializeField] private Text rightTitleElement, rightContentElement;
-        [SerializeField] private Image rightSpriteElement;
+        [SerializeField] private RectTransform dialogBG;
+        [SerializeField] private Text titleElement;
+        [SerializeField] private Text contentElement;
+        [SerializeField] private Image spriteElement;
         [SerializeField] private Slider timerElement;
-        [SerializeField, ReadOnly] private List<Button> options;
-        [SerializeField] private int selectedOptionIndex = 0;
+        [SerializeField] private RectTransform optionsHolder;
 
-        public Button SelectedOption
-        {
-            get
-            {
-                return options[selectedOptionIndex];
-            }
-        }
+        [Title("References")] [SerializeField] private GameObject buttonPrefab;
 
         private ConversationControls _map;
         private ConversationObject _currentConversationObject;
+        private List<Button> _options = new();
 
         private UnityEvent _cachedAfterEvent;
 
@@ -52,6 +49,8 @@ namespace Hysteria.Dialog
                 return _instance;
             }
         }
+
+        public static event SelectedOptionCallback OnSelectOption;
 
         public bool InConversation => CurrentConversation > -1;
 
@@ -79,6 +78,7 @@ namespace Hysteria.Dialog
             _dialogDataIndex = -1;
             
             holder.SetActive(false);
+            optionsHolder.gameObject.SetActive(false);
         }
 
         private void Update()
@@ -107,31 +107,43 @@ namespace Hysteria.Dialog
                 return;
 
             DialogData currentDialog = _currentConversationObject.Dialogs[_dialogDataIndex];
-
-            if (currentDialog.UseRightBackground)
+            bool isMultiResponse = currentDialog.DialogType == DialogType.MultiResponse;
+            optionsHolder.gameObject.SetActive(false);
+            
+            if (isMultiResponse)
             {
-                leftBG.gameObject.SetActive(false);
-                rightBG.gameObject.SetActive(true);
-                rightTitleElement.text = currentDialog.Character.CharacterName;
-                rightContentElement.text = currentDialog.CharacterContent;
-                rightSpriteElement.sprite = currentDialog.Character.CharacterSprite;
+                optionsHolder.gameObject.SetActive(true);
+                DialogOptionSet optionSet = currentDialog.options;
+                foreach (var i in _options)
+                    Destroy(i.gameObject);
+                _options.Clear();
+
+                int index = 0;
+                foreach (var opt in optionSet.options)
+                {
+                    Button button = Instantiate(buttonPrefab, optionsHolder).GetComponent<Button>();
+                    button.onClick.AddListener(() =>
+                    {
+                        OnSelectOption?.Invoke(optionSet, index++);
+                        ContinueConversation();
+                    });
+                    Text text = button.GetComponentInChildren<Text>();
+                    text.text = opt.optionText;
+
+                    if (opt.isSpecial)
+                    {
+                        button.image.color = new Color(1, 0, 0, 0);
+                    }
+                    
+                    _options.Add(button);
+                }
             }
             else
             {
-                leftBG.gameObject.SetActive(true);
-                rightBG.gameObject.SetActive(false);
-                leftTitleElement.text = currentDialog.Character.CharacterName;
-                leftContentElement.text = currentDialog.CharacterContent;
-                leftSpriteElement.sprite = currentDialog.Character.CharacterSprite;
-            }
-
-            // Show/hide options based on DialogType
-            bool isMultiResponse = currentDialog.DialogType == DialogType.MultiResponse;
-
-            if (isMultiResponse)
-            {
-                // Update option texts if needed
-                
+                optionsHolder.gameObject.SetActive(true);
+                titleElement.text = currentDialog.Character.CharacterName;
+                contentElement.text = currentDialog.CharacterContent;
+                spriteElement.sprite = currentDialog.Character.CharacterSprite;
             }
         }
 
@@ -150,6 +162,14 @@ namespace Hysteria.Dialog
                 _cachedAfterEvent = afterEvent;
             
             holder.SetActive(true);
+        }
+        
+        public void InvokeConversation(ConversationObject obj, UnityEvent afterEvent = null)
+        {
+            if (!Conversations.Contains(obj))
+                Conversations.Add(obj);
+            
+            InvokeConversation(Conversations.IndexOf(obj), afterEvent);
         }
 
         public void ExitConversation()

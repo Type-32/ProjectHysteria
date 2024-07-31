@@ -16,7 +16,7 @@ namespace Hysteria.Controller
         [SerializeField, MinMaxSlider(0, 200)] protected float mouseSensitivity = 100f;
         [SerializeField] protected CinemachineVirtualCamera firstPersonCamera;
         [SerializeField] protected CinemachineVirtualCamera topdownCamera;
-        protected Camera camera;
+        protected new Camera camera;
 
         private Vector3 movement, lastNonZeroMovement;
         private float verticalRotation = 0f;

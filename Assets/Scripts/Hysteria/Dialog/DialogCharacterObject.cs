@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Hysteria.Dialog
@@ -7,6 +8,6 @@ namespace Hysteria.Dialog
     public class DialogCharacterObject : ScriptableObject
     {
         public string CharacterName;
-        [ShowAssetPreview] public Sprite CharacterSprite;
+        [PreviewField] public Sprite CharacterSprite;
     }
 }
