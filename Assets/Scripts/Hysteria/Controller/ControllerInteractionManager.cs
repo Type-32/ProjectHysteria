@@ -42,6 +42,8 @@ namespace Hysteria.Controller
 
         private void FixedUpdate()
         {
+            if (Controller.IsFirstPerson()) return;
+            
             IInteractableObject closestObject = null;
             float closestDistance = detectionRange;
             Dictionary<IInteractableObject, float> objectsInRange = new Dictionary<IInteractableObject, float>();
@@ -130,8 +132,25 @@ namespace Hysteria.Controller
 
         public void InteractSelectedObject()
         {
-            if(SelectedObject != null && Vector3.Distance(SelectedObject.GetGameObject().transform.position, gameObject.transform.position) <= interactionRange)
-                SelectedObject?.Interact();
+            if (!Controller.IsFirstPerson())
+            {
+                if (SelectedObject != null &&
+                    Vector3.Distance(SelectedObject.GetGameObject().transform.position,
+                        gameObject.transform.position) <= interactionRange)
+                    SelectedObject?.Interact();
+            }
+            else
+            {
+                if (Physics.Raycast(Controller._firstPersonCamera.transform.position,
+                        Controller._firstPersonCamera.transform.forward, out RaycastHit hit, interactionRange))
+                {
+                    if (hit.collider != null && hit.collider.gameObject.CompareTag(lookForTag))
+                    {
+                        IInteractableObject obj = hit.collider.gameObject.GetComponent<IInteractableObject>();
+                        obj?.Interact();
+                    }
+                }
+            }
         }
     }
 }

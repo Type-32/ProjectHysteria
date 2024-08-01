@@ -16,6 +16,8 @@ namespace Hysteria.Props
 
         private bool _inControl = false;
 
+        public bool CanExitControl = true;
+
         private void Start()
         {
             _manager = FindObjectOfType<ControllerManager>();
@@ -34,6 +36,7 @@ namespace Hysteria.Props
 
         private void OnExitFirstPerson(InputAction.CallbackContext ctx)
         {
+            if (!CanExitControl) return;
             _manager.ExitFirstPerson();
             _inControl = !_inControl;
             _manager.InputManager.GetMap().FP.ExitFirstPerson.performed -= OnExitFirstPerson;
@@ -46,6 +49,11 @@ namespace Hysteria.Props
                 animator.SetFloat("hori", _manager.Movement.GetDirectInput().x);
                 animator.SetFloat("verti", _manager.Movement.GetDirectInput().y);
             }
+        }
+
+        public void SetCanExitControls(bool value)
+        {
+            CanExitControl = value;
         }
     }
 }
