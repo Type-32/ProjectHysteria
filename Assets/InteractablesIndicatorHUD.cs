@@ -38,7 +38,7 @@ public class InteractablesIndicatorHUD : MonoBehaviour
             {
                 if (tracker && obj.GetGameObject())
                 {
-                    tracker.position = _camera.WorldToScreenPoint(obj.GetGameObject().transform.position);
+                    tracker.position = _camera.WorldToViewportPoint(obj.GetGameObject().transform.position);
                 }
                 else
                 {

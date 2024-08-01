@@ -47,6 +47,7 @@ namespace Hysteria.Controller
                 if (c.gameObject.CompareTag(lookForTag))
                 {
                     closestObject = c.gameObject.GetComponent<IInteractableObject>();
+                    if(!_interactablesIndicatorHUD) _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
                     _interactablesIndicatorHUD?.AddTrackingObject(closestObject, Color.white);
                 }
             }
