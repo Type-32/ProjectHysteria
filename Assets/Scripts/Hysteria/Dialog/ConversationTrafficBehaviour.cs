@@ -174,7 +174,7 @@ namespace Hysteria.Dialog
                 EventSystem eventSystem = FindObjectOfType<EventSystem>();
                 if (eventSystem)
                 {
-                    eventSystem.firstSelectedGameObject = _options[0].gameObject;
+                    eventSystem.SetSelectedGameObject(_options[0].gameObject);
                 }
             }
             else

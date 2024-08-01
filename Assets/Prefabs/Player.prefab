@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6171680466904961178}
   - component: {fileID: 2585663030284108166}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5610961174989184688}
   - component: {fileID: 1970525898288142353}
   - component: {fileID: 3160177615054279239}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3337792220439089140}
   - component: {fileID: 2426124141645219775}
   - component: {fileID: 4966441316863657302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 1486631867941319034}
   - component: {fileID: 6083832083657888697}
   - component: {fileID: 8298536409370500315}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,9 +5213,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8159898621747189113, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6013314070312586025, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4819223349682164798, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -259972160606440404, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
       propertyPath: m_Name
       value: hooded 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7876023681238672744, guid: fa7e60d613e294833ac5d3cd2ac78fd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

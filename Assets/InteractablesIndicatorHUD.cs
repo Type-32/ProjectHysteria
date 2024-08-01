@@ -14,6 +14,23 @@ public class InteractablesIndicatorHUD : MonoBehaviour
     private Dictionary<IInteractableObject, RectTransform> trackers = new();
     [SerializeField] private GameObject trackerPrefab;
 
+    private Canvas _hudCanvas;
+
+    public Canvas HUDCanvas
+    {
+        get
+        {
+            if (!_hudCanvas)
+            {
+                _hudCanvas = GetComponent<Canvas>();
+                if (!_hudCanvas)
+                    _hudCanvas.GetComponentInChildren<Canvas>();
+            }
+
+            return _hudCanvas;
+        }
+    }
+
     void Start()
     {
         _camera = Camera.main;
@@ -79,5 +96,15 @@ public class InteractablesIndicatorHUD : MonoBehaviour
                 Destroy(tracker.gameObject);
             trackers.Remove(target);
         }
+    }
+
+    public void EnableCanvas()
+    {
+        HUDCanvas.enabled = true;
+    }
+    
+    public void DisableCanvas()
+    {
+        HUDCanvas.enabled = false;
     }
 }
