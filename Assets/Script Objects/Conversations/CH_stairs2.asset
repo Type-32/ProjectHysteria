@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11bd567f6fd4e7ba0e8febc7111c70a, type: 3}
+  m_Name: CH_stairs2
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterContent: "\u7389\u6811\u7AF9\u6797\u8038\u7ACB\u4E24\u6392\uFF0C\u98CE\u6B47\u96E8\u843D\u4E8E\u6708\u5149\u63D0\u7B14\u6240\u7ED8\u7684\u7EFF\u53F6\u679D\u6860\uFF0C\u594F\u8D77\u5B64\u884C\u591C\u66F2\u4E00\u9996\u3002"
+    options: {fileID: 0}
+    showOneTime: 0
