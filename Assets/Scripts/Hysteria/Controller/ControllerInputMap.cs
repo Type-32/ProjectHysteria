@@ -233,6 +233,15 @@ namespace Hysteria.Controller
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ExitFirstPerson"",
+                    ""type"": ""Button"",
+                    ""id"": ""762405ec-b0ca-4c4f-ad2d-857594d47c0b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -389,6 +398,28 @@ namespace Hysteria.Controller
                     ""action"": ""CameraLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49079098-c357-4f77-bea7-b620e32a0e49"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ExitFirstPerson"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6b2aebe-457a-425f-b837-3c4faa49bb0e"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ExitFirstPerson"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -405,6 +436,7 @@ namespace Hysteria.Controller
             m_FP_Movement = m_FP.FindAction("Movement", throwIfNotFound: true);
             m_FP_Interact = m_FP.FindAction("Interact", throwIfNotFound: true);
             m_FP_CameraLook = m_FP.FindAction("CameraLook", throwIfNotFound: true);
+            m_FP_ExitFirstPerson = m_FP.FindAction("ExitFirstPerson", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -531,6 +563,7 @@ namespace Hysteria.Controller
         private readonly InputAction m_FP_Movement;
         private readonly InputAction m_FP_Interact;
         private readonly InputAction m_FP_CameraLook;
+        private readonly InputAction m_FP_ExitFirstPerson;
         public struct FPActions
         {
             private @ControllerInputMap m_Wrapper;
@@ -538,6 +571,7 @@ namespace Hysteria.Controller
             public InputAction @Movement => m_Wrapper.m_FP_Movement;
             public InputAction @Interact => m_Wrapper.m_FP_Interact;
             public InputAction @CameraLook => m_Wrapper.m_FP_CameraLook;
+            public InputAction @ExitFirstPerson => m_Wrapper.m_FP_ExitFirstPerson;
             public InputActionMap Get() { return m_Wrapper.m_FP; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -556,6 +590,9 @@ namespace Hysteria.Controller
                 @CameraLook.started += instance.OnCameraLook;
                 @CameraLook.performed += instance.OnCameraLook;
                 @CameraLook.canceled += instance.OnCameraLook;
+                @ExitFirstPerson.started += instance.OnExitFirstPerson;
+                @ExitFirstPerson.performed += instance.OnExitFirstPerson;
+                @ExitFirstPerson.canceled += instance.OnExitFirstPerson;
             }
 
             private void UnregisterCallbacks(IFPActions instance)
@@ -569,6 +606,9 @@ namespace Hysteria.Controller
                 @CameraLook.started -= instance.OnCameraLook;
                 @CameraLook.performed -= instance.OnCameraLook;
                 @CameraLook.canceled -= instance.OnCameraLook;
+                @ExitFirstPerson.started -= instance.OnExitFirstPerson;
+                @ExitFirstPerson.performed -= instance.OnExitFirstPerson;
+                @ExitFirstPerson.canceled -= instance.OnExitFirstPerson;
             }
 
             public void RemoveCallbacks(IFPActions instance)
@@ -597,6 +637,7 @@ namespace Hysteria.Controller
             void OnMovement(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnCameraLook(InputAction.CallbackContext context);
+            void OnExitFirstPerson(InputAction.CallbackContext context);
         }
     }
 }

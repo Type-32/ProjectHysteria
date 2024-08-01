@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Hysteria.Interface;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,11 +32,11 @@ public class InteractablesIndicatorHUD : MonoBehaviour
 
     private void UpdateTrackers()
     {
-        foreach (var obj in new List<IInteractableObject>(trackers.Keys))
+        foreach (var obj in trackers.Keys.ToList())
         {
             if (trackers.TryGetValue(obj, out RectTransform tracker))
             {
-                if (tracker != null && obj.GetGameObject() != null)
+                if (tracker && obj.GetGameObject())
                 {
                     tracker.position = _camera.WorldToScreenPoint(obj.GetGameObject().transform.position);
                 }
@@ -68,7 +69,7 @@ public class InteractablesIndicatorHUD : MonoBehaviour
     {
         if (trackers.TryGetValue(target, out RectTransform tracker))
         {
-            if (tracker != null)
+            if (tracker)
                 Destroy(tracker.gameObject);
             trackers.Remove(target);
         }

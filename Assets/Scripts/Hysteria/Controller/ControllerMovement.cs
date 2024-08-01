@@ -69,7 +69,7 @@ namespace Hysteria.Controller
             // Calculate movement vector
             if (isFirstPersonMode)
             {
-                movement = transform.right * horizontalInput + transform.forward * verticalInput;
+                movement = Controller._firstPersonObjectRB.transform.right * horizontalInput + Controller._firstPersonObjectRB.transform.forward * verticalInput;
             }
             else
             {
@@ -82,13 +82,6 @@ namespace Hysteria.Controller
                 lastNonZeroMovement = movement;
             }
 
-            // Handle mode switching
-            // TODO Remove Debug Code In production
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                ToggleMode();
-            }
-
             // Handle rotation in first-person mode
             if (isFirstPersonMode)
             {
@@ -96,7 +89,7 @@ namespace Hysteria.Controller
                 float mouseX = _directLookInput.x * mouseSensitivity;
                 float mouseY = _directLookInput.y * mouseSensitivity;
 
-                transform.Rotate(0, mouseX, 0);
+                Controller._firstPersonObjectRB.transform.Rotate(0, mouseX, 0);
 
                 verticalRotation -= mouseY;
                 verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
@@ -122,9 +115,16 @@ namespace Hysteria.Controller
             
             Vector3 targetVelocity = movement * maxSpeed;
 
-            targetVelocity.y = RB.velocity.y;
-
-            RB.velocity = targetVelocity;
+            if (isFirstPersonMode)
+            {
+                targetVelocity.y = Controller._firstPersonObjectRB.velocity.y;
+                Controller._firstPersonObjectRB.velocity = targetVelocity;
+            }
+            else
+            {
+                targetVelocity.y = RB.velocity.y;
+                RB.velocity = targetVelocity;
+            }
         }
 
         private void RotateCharacter()
@@ -150,6 +150,7 @@ namespace Hysteria.Controller
             if (isFirstPersonMode)
             {
                 verticalRotation = 0f;
+                firstPersonCamera = Controller._firstPersonCamera;
                 firstPersonCamera.transform.localRotation = Quaternion.identity;
                 firstPersonCamera.Priority = 20;
                 topdownCamera.Priority = 10;

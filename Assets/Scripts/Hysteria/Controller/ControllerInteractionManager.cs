@@ -15,7 +15,7 @@ namespace Hysteria.Controller
         [Sirenix.OdinInspector.MinValue(0f), Sirenix.OdinInspector.MaxValue(5f)]
         protected float detectionRange = 3f, interactingRange = 1f;
 
-        [Tag]
+        [Tag, SerializeField]
         protected string lookForTag = "";
         
         [CanBeNull]
@@ -26,7 +26,14 @@ namespace Hysteria.Controller
         }
 
         private List<Collider> cachedColliders = new();
-        
+
+        [CanBeNull] private InteractablesIndicatorHUD _interactablesIndicatorHUD;
+
+        private void Start()
+        {
+            _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
+        }
+
         private void FixedUpdate()
         {
             IInteractableObject closestObject = null;
@@ -40,6 +47,7 @@ namespace Hysteria.Controller
                 if (c.gameObject.CompareTag(lookForTag))
                 {
                     closestObject = c.gameObject.GetComponent<IInteractableObject>();
+                    _interactablesIndicatorHUD?.AddTrackingObject(closestObject, Color.white);
                 }
             }
             

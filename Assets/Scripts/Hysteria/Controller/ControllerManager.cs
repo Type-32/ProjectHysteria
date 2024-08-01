@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +10,10 @@ namespace Hysteria.Controller
         [SerializeField] protected bool isFirstPersonMode = false;
         public ControllerMovement Movement;
         public ControllerInputManager InputManager;
+        public ControllerInteractionManager InteractionManager;
         public Rigidbody RB;
+        internal Rigidbody _firstPersonObjectRB;
+        internal CinemachineVirtualCamera _firstPersonCamera;
 
         public void RegisterActions()
         {
@@ -50,7 +54,7 @@ namespace Hysteria.Controller
 
         private void OnPerformInteract(InputAction.CallbackContext ctx)
         {
-            
+            InteractionManager.InteractSelectedObject();
         }
 
         private void OnPerformLMB(InputAction.CallbackContext ctx)
@@ -59,11 +63,20 @@ namespace Hysteria.Controller
         }
 
         #endregion
-        
-        #region Message Listeners
-        
-        
-        
-        #endregion
+
+        public void SwitchToFirstPerson(GameObject obj)
+        {
+            _firstPersonObjectRB = obj.GetComponent<Rigidbody>();
+            _firstPersonCamera = obj.GetComponentInChildren<CinemachineVirtualCamera>();
+            
+            ToggleMode();
+        }
+
+        public void ExitFirstPerson()
+        {
+            ToggleMode();
+            _firstPersonObjectRB = null;
+            _firstPersonCamera = null;
+        }
     }
 }
