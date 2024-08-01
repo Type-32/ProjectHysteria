@@ -103,7 +103,7 @@ namespace Hysteria.Dialog
 
         public void RefreshCanvasCamera(Camera cam)
         {
-            Canvas canvas = GetComponent<Canvas>();
+            Canvas canvas = holder.GetComponent<Canvas>();
             canvas.worldCamera = cam;
         }
 
