@@ -76,12 +76,6 @@ namespace Hysteria.Controller
                 movement = new Vector3(_smoothInput.x, 0f, _smoothInput.y);
             }
 
-            // Store last non-zero movement for top-down rotation when stationary
-            if (!isFirstPersonMode && !_directInput.Equals(Vector2.zero))
-            {
-                lastNonZeroMovement = movement;
-            }
-
             // Handle rotation in first-person mode
             if (isFirstPersonMode)
             {
@@ -129,9 +123,10 @@ namespace Hysteria.Controller
 
         private void RotateCharacter()
         {
-            if (movement != Vector3.zero)
+            if (movement.magnitude > 0.1f)  // Only rotate if there's significant movement
             {
-                Quaternion targetRotation = Quaternion.LookRotation(lastNonZeroMovement, Vector3.up);
+                lastNonZeroMovement = movement;  // Update lastNonZeroMovement here
+                Quaternion targetRotation = Quaternion.LookRotation(movement, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
             }
         }
@@ -177,10 +172,10 @@ namespace Hysteria.Controller
         private void OnPerformMovement(InputAction.CallbackContext ctx)
         {
             _directInput = ctx.ReadValue<Vector2>();
-            if (!isFirstPersonMode)
-            {
-                lastNonZeroMovement = movement;
-            }
+            // if (!isFirstPersonMode)
+            // {
+            //     lastNonZeroMovement = movement;
+            // }
         }
 
         private void OnCancelMovement(InputAction.CallbackContext ctx)

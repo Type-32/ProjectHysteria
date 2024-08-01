@@ -10,8 +10,9 @@ public class GlobalAudioSourceManager : SerializedSingleton<GlobalAudioSourceMan
     private List<AudioSource> _audioSources = new List<AudioSource>();
     [SerializeField] private Dictionary<string, AudioClip> _audioClips = new Dictionary<string, AudioClip>();
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         InitializeAudioSources();
     }
 
