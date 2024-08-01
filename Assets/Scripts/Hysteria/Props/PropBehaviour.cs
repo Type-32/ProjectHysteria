@@ -15,9 +15,9 @@ namespace Hysteria.Props
             return GetObject();
         }
 
-        public PropBehaviour GetObject()
+        public virtual PropBehaviour GetObject()
         {
-            return this;
+            return null;
         }
 
         public virtual void Interact()

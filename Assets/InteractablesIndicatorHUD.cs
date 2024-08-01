@@ -4,17 +4,12 @@ using System.Collections.Generic;
 using Hysteria.Interface;
 using UnityEngine;
 using UnityEngine.UI;
-
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using Hysteria.Interface;
-using UnityEngine;
-using UnityEngine.UI;
 
 public class InteractablesIndicatorHUD : MonoBehaviour
 {
     private Camera _camera;
+    [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private RectTransform trackerHolder;
     private Dictionary<IInteractableObject, RectTransform> trackers = new();
     [SerializeField] private GameObject trackerPrefab;
@@ -22,47 +17,58 @@ public class InteractablesIndicatorHUD : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
-        trackerHolder = GetComponent<RectTransform>();
+        if (!canvasRectTransform)
+        {
+            canvasRectTransform = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        }
+        if (!trackerHolder)
+        {
+            Debug.LogWarning("Tracker holder not set. Using this GameObject's RectTransform.");
+            trackerHolder = GetComponent<RectTransform>();
+        }
     }
 
     void FixedUpdate()
     {
-        UpdateTrackers();
+        UpdateTrackerPositions();
     }
 
-    private void UpdateTrackers()
+    private void UpdateTrackerPositions()
     {
-        foreach (var obj in trackers.Keys.ToList())
+        foreach (var kvp in trackers)
         {
-            if (trackers.TryGetValue(obj, out RectTransform tracker))
+            if (kvp.Key.GetGameObject() != null)
             {
-                if (tracker && obj.GetGameObject())
-                {
-                    tracker.position = _camera.WorldToViewportPoint(obj.GetGameObject().transform.position);
-                }
-                else
-                {
-                    RemoveTrackingObject(obj);
-                }
+                Vector3 worldPosition = kvp.Key.GetGameObject().transform.position;
+                Vector3 viewportPosition = _camera.WorldToViewportPoint(worldPosition);
+                Vector2 screenPosition = new Vector2(
+                    ((viewportPosition.x * canvasRectTransform.sizeDelta.x) - (canvasRectTransform.sizeDelta.x * 0.5f)),
+                    ((viewportPosition.y * canvasRectTransform.sizeDelta.y) - (canvasRectTransform.sizeDelta.y * 0.5f))
+                );
+
+                kvp.Value.anchoredPosition = screenPosition;
+
+                // Hide the tracker if the object is behind the camera
+                kvp.Value.gameObject.SetActive(viewportPosition.z > 0);
             }
         }
     }
     
-    public RectTransform AddTrackingObject(IInteractableObject target, Color color, float ratioSize = 1f)
+    public void UpdateTrackingObject(IInteractableObject target, Color color, float scale)
     {
-        if (trackers.ContainsKey(target))
-            return trackers[target];
+        if (!trackers.TryGetValue(target, out RectTransform tracker))
+        {
+            tracker = Instantiate(trackerPrefab, trackerHolder).GetComponent<RectTransform>();
+            tracker.SetParent(trackerHolder, false);
+            trackers.Add(target, tracker);
+        }
 
-        RectTransform obj = Instantiate(trackerPrefab, trackerHolder).GetComponent<RectTransform>();
-        trackers.Add(target, obj);
-
-        Image img = obj.GetComponentInChildren<Image>();
+        Image img = tracker.GetComponentInChildren<Image>();
         if (img != null)
         {
             img.color = color;
-            obj.localScale = new Vector3(obj.localScale.x * ratioSize, obj.localScale.y * ratioSize, obj.localScale.z * ratioSize);
+            tracker.localScale = Vector3.one * scale;
         }
-        return obj;
     }
 
     public void RemoveTrackingObject(IInteractableObject target)

@@ -12,8 +12,8 @@ namespace Hysteria.Controller
 {
     public class ControllerInteractionManager : ControllerComponent
     {
-        [Sirenix.OdinInspector.MinValue(0f), Sirenix.OdinInspector.MaxValue(5f)]
-        protected float detectionRange = 3f, interactingRange = 1f;
+        [Sirenix.OdinInspector.MinValue(0f), Sirenix.OdinInspector.MaxValue(5f), SerializeField]
+        protected float detectionRange = 4f, interactionRange = 2f;
 
         [Tag, SerializeField]
         protected string lookForTag = "";
@@ -26,8 +26,14 @@ namespace Hysteria.Controller
         }
 
         private List<Collider> cachedColliders = new();
+        private Dictionary<IInteractableObject, float> trackedObjects = new Dictionary<IInteractableObject, float>();
 
         [CanBeNull] private InteractablesIndicatorHUD _interactablesIndicatorHUD;
+
+        [SerializeField] private Color detectionRangeColor = Color.gray;
+        [SerializeField] private Color interactionRangeColor = Color.white;
+        [SerializeField] private float detectionRangeScale = 0.8f;
+        [SerializeField] private float interactionRangeScale = 1f;
 
         private void Start()
         {
@@ -37,22 +43,66 @@ namespace Hysteria.Controller
         private void FixedUpdate()
         {
             IInteractableObject closestObject = null;
-            float distance = detectionRange;
+            float closestDistance = detectionRange;
+            Dictionary<IInteractableObject, float> objectsInRange = new Dictionary<IInteractableObject, float>();
+
             foreach (var c in GetVisibleCollidersInSphere(transform.position, detectionRange))
             {
-                float temp = Vector3.Distance(c.transform.position, transform.position);
+                float distance = Vector3.Distance(c.transform.position, transform.position);
                 
-                if (temp > distance) continue;
-                
-                if (c.gameObject.CompareTag(lookForTag))
+                if (distance <= detectionRange && c.gameObject.CompareTag(lookForTag))
                 {
-                    closestObject = c.gameObject.GetComponent<IInteractableObject>();
-                    if(!_interactablesIndicatorHUD) _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
-                    _interactablesIndicatorHUD?.AddTrackingObject(closestObject, Color.white);
+                    var interactableObject = c.gameObject.GetComponent<IInteractableObject>();
+                    if (interactableObject != null)
+                    {
+                        objectsInRange[interactableObject] = distance;
+                        
+                        if (distance < closestDistance)
+                        {
+                            closestObject = interactableObject;
+                            closestDistance = distance;
+                        }
+                    }
                 }
             }
+
+            // Update or remove trackers based on current objects in range
+            UpdateAllTrackers(objectsInRange);
+
+            // Update the dictionary of tracked objects
+            trackedObjects = objectsInRange;
             
             SelectedObject = closestObject;
+        }
+
+        private void UpdateAllTrackers(Dictionary<IInteractableObject, float> objectsInRange)
+        {
+            if (!_interactablesIndicatorHUD) _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
+            if (_interactablesIndicatorHUD == null) return;
+
+            // Update trackers for objects in range
+            foreach (var kvp in objectsInRange)
+            {
+                UpdateTracker(kvp.Key, kvp.Value);
+            }
+
+            // Remove trackers for objects that are no longer in range
+            foreach (var trackedObject in new List<IInteractableObject>(trackedObjects.Keys))
+            {
+                if (!objectsInRange.ContainsKey(trackedObject))
+                {
+                    _interactablesIndicatorHUD.RemoveTrackingObject(trackedObject);
+                    trackedObjects.Remove(trackedObject);
+                }
+            }
+        }
+
+        private void UpdateTracker(IInteractableObject interactableObject, float distance)
+        {
+            Color color = distance <= interactionRange ? interactionRangeColor : detectionRangeColor;
+            float scale = distance <= interactionRange ? interactionRangeScale : detectionRangeScale;
+            
+            _interactablesIndicatorHUD?.UpdateTrackingObject(interactableObject, color, scale);
         }
         
         private List<Collider> GetVisibleCollidersInSphere(Vector3 center, float radius)
@@ -60,7 +110,7 @@ namespace Hysteria.Controller
             List<Collider> visibleColliders = new List<Collider>();
             Collider[] colliders = Physics.OverlapSphere(center, radius);
 
-            if (cachedColliders.Equals(colliders))
+            if (cachedColliders.Count == colliders.Length && cachedColliders.TrueForAll(c => Array.IndexOf(colliders, c) != -1))
                 return cachedColliders;
 
             foreach (Collider collider in colliders)
@@ -68,11 +118,9 @@ namespace Hysteria.Controller
                 Vector3 directionToCollider = collider.bounds.center - center;
                 float distanceToCollider = directionToCollider.magnitude;
 
-                RaycastHit hit;
-                if (Physics.Raycast(center, directionToCollider, out hit, distanceToCollider + 1))
+                if (Physics.Raycast(center, directionToCollider, out RaycastHit hit, distanceToCollider + 1) && hit.collider == collider)
                 {
-                    if (hit.collider.Equals(collider))
-                        visibleColliders.Add(collider);
+                    visibleColliders.Add(collider);
                 }
             }
 
@@ -82,7 +130,8 @@ namespace Hysteria.Controller
 
         public void InteractSelectedObject()
         {
-            SelectedObject?.Interact();
+            if(Vector3.Distance(SelectedObject.GetGameObject().transform.position, gameObject.transform.position) <= interactionRange)
+                SelectedObject?.Interact();
         }
     }
 }

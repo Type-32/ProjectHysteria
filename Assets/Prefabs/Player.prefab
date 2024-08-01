@@ -221,7 +221,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d059c4c01b844748ac3634096d7ae9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRange: 4
+  interactionRange: 1.5
   lookForTag: Interactable Object
+  detectionRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  interactionRangeColor: {r: 1, g: 1, b: 1, a: 1}
+  detectionRangeScale: 0.8
+  interactionRangeScale: 1
 --- !u!1 &8648758435156824803
 GameObject:
   m_ObjectHideFlags: 0
