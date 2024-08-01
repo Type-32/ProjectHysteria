@@ -88,6 +88,7 @@ namespace Hysteria.Controller
                 verticalRotation -= mouseY;
                 verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
                 firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+                Controller._firstPersonObjectRB.angularVelocity = Vector3.zero;
             }
             else
             {
@@ -123,6 +124,7 @@ namespace Hysteria.Controller
 
         private void RotateCharacter()
         {
+            RB.angularVelocity = Vector3.zero;
             if (movement.magnitude > 0.1f)  // Only rotate if there's significant movement
             {
                 lastNonZeroMovement = movement;  // Update lastNonZeroMovement here
