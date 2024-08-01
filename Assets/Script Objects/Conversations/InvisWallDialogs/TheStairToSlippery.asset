@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e11bd567f6fd4e7ba0e8febc7111c70a, type: 3}
-  m_Name: ItsDarkOutThere
+  m_Name: TheStairToSlippery
   m_EditorClassIdentifier: 
   Dialogs:
   - DialogType: 0
     Character: {fileID: 11400000, guid: 765a4eb6a40b7418c9885b14c2442a23, type: 2}
-    CharacterContent: It's dark out there.
+    CharacterContent: I must be careful, the stairs is way to old and slippery...
     options: {fileID: 0}
+    showOneTime: 0
