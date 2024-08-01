@@ -130,7 +130,7 @@ namespace Hysteria.Controller
 
         public void InteractSelectedObject()
         {
-            if(Vector3.Distance(SelectedObject.GetGameObject().transform.position, gameObject.transform.position) <= interactionRange)
+            if(SelectedObject != null && Vector3.Distance(SelectedObject.GetGameObject().transform.position, gameObject.transform.position) <= interactionRange)
                 SelectedObject?.Interact();
         }
     }

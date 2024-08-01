@@ -196,5 +196,15 @@ namespace Hysteria.Controller
             _directLookInput = Vector2.zero;
         }
         #endregion
+
+        public Vector2 GetDirectInput(bool smooth = true)
+        {
+            return smooth ? _smoothInput : _directInput;
+        }
+        
+        public Vector2 GetDirectLookInput()
+        {
+            return _directLookInput;
+        }
     }
 }

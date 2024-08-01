@@ -12,6 +12,8 @@ namespace Hysteria.Props
     {
         private ControllerManager _manager;
 
+        [SerializeField] private Animator animator;
+
         private bool _inControl = false;
 
         private void Start()
@@ -35,6 +37,15 @@ namespace Hysteria.Props
             _manager.ExitFirstPerson();
             _inControl = !_inControl;
             _manager.InputManager.GetMap().FP.ExitFirstPerson.performed -= OnExitFirstPerson;
+        }
+
+        private void FixedUpdate()
+        {
+            if (_manager && animator)
+            {
+                animator.SetFloat("hori", _manager.Movement.GetDirectInput().x);
+                animator.SetFloat("verti", _manager.Movement.GetDirectInput().y);
+            }
         }
     }
 }

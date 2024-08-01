@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Hysteria.Utility;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Hysteria.SceneControls
@@ -18,6 +19,8 @@ namespace Hysteria.SceneControls
         public bool IsLoading { get; private set; }
 
         [HideInInspector] public bool _startFade = false;
+
+        public UnityEvent<Camera> onSceneLoaded;
 
         protected void Start()
         {
@@ -87,6 +90,7 @@ namespace Hysteria.SceneControls
             _loadingProgress = 1f;
 
             RefreshAllCanvasesCameras();
+            onSceneLoaded.Invoke(Camera.main);
             
             IsLoading = false;
         }

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using Hysteria.Controller;
+using Hysteria.SceneControls;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -14,8 +16,18 @@ namespace Hysteria.Dialog
     public class ConversationTrafficBehaviour : MonoBehaviour
     {
         public delegate void SelectedOptionCallback(DialogOptionSet set, int selectedIndex);
-        
-        [ShowNonSerializedField] private ControllerManager Controller;
+
+        private ControllerManager _controller;
+
+        private ControllerManager Controller
+        {
+            get
+            {
+                if (!_controller)
+                    _controller = FindObjectOfType<ControllerManager>();
+                return _controller;
+            }
+        }
         public List<ConversationObject> Conversations = new();
         [ShowNonSerializedField] private int CurrentConversation = -1;
         
@@ -47,7 +59,11 @@ namespace Hysteria.Dialog
             get
             {
                 if (!_instance)
+                {
                     _instance = FindObjectOfType<ConversationTrafficBehaviour>();
+                    if (!_instance)
+                        _instance = FindObjectOfType<ConversationTrafficBehaviour>();
+                }
                 return _instance;
             }
         }
@@ -75,12 +91,20 @@ namespace Hysteria.Dialog
         private void Awake()
         {
             _instance = this;
-            Controller = FindObjectOfType<ControllerManager>();
             _map = new ConversationControls();
             _dialogDataIndex = -1;
             
             holder.SetActive(false);
             optionsHolder.gameObject.SetActive(false);
+
+            SceneController sceneController = gameObject.GetComponent<SceneController>();
+            sceneController.onSceneLoaded.AddListener(RefreshCanvasCamera);
+        }
+
+        public void RefreshCanvasCamera(Camera cam)
+        {
+            Canvas canvas = GetComponent<Canvas>();
+            canvas.worldCamera = cam;
         }
 
         // private void Update()
@@ -146,6 +170,12 @@ namespace Hysteria.Dialog
                     
                     _options.Add(button);
                 }
+
+                EventSystem eventSystem = FindObjectOfType<EventSystem>();
+                if (eventSystem)
+                {
+                    eventSystem.firstSelectedGameObject = _options[0].gameObject;
+                }
             }
             else
             {
@@ -201,26 +231,26 @@ namespace Hysteria.Dialog
         }
         protected void OnPerformSelectNext(InputAction.CallbackContext context)
         {
-            if (!InConversation) return;
-
-            if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
-            {
-                _dialogDataIndex++;
-                if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
-                    _cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
-                    OnPerformSelectNext(context);
-                else if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
-                         !_cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
-                    _cachedDialogData.Add(_currentConversationObject.Dialogs[_dialogDataIndex]);
-                UpdateDialogUI();
-            }
-            else
-            {
-                ExitConversation();
-            }
-            
-            if(_cachedAfterEvent != null)
-                _cachedAfterEvent?.Invoke();
+            // if (!InConversation) return;
+            //
+            // if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
+            // {
+            //     _dialogDataIndex++;
+            //     if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
+            //         _cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
+            //         OnPerformSelectNext(context);
+            //     else if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime &&
+            //              !_cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
+            //         _cachedDialogData.Add(_currentConversationObject.Dialogs[_dialogDataIndex]);
+            //     UpdateDialogUI();
+            // }
+            // else
+            // {
+            //     ExitConversation();
+            // }
+            //
+            // if(_cachedAfterEvent != null)
+            //     _cachedAfterEvent?.Invoke();
         }
         protected void OnPerformSelectPrevious(InputAction.CallbackContext context)
         {
@@ -235,6 +265,18 @@ namespace Hysteria.Dialog
             if (_dialogDataIndex < _currentConversationObject.Dialogs.Count - 1)
             {
                 _dialogDataIndex++;
+                if (_currentConversationObject.Dialogs[_dialogDataIndex].showOneTime)
+                {
+                    if (_cachedDialogData.Contains(_currentConversationObject.Dialogs[_dialogDataIndex]))
+                    {
+                        ContinueConversation(forceContinue);
+                        return;
+                    }
+                    else
+                    {
+                        _cachedDialogData.Add(_currentConversationObject.Dialogs[_dialogDataIndex]);
+                    }
+                }
                 UpdateDialogUI();
             }
             else
