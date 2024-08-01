@@ -44,7 +44,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.8490566, g: 0.640697, b: 0.47659308, a: 1}
+  m_Color: {r: 0.764151, g: 0.48396322, b: 0.41451588, a: 1}
   m_Intensity: 100
   m_Range: 10
   m_SpotAngle: 30
@@ -88,7 +88,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 8924
+  m_ColorTemperature: 7384
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0

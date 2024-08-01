@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerInteractionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropControllableCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropControllableCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hysteria/Dialog/ConversationTrafficBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bottinogames.samity@7b8a214b4c/Samity/Components/SamSpeaker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/8b/02d5bd5c/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/dd/92dba3df/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/f5/6e1785a4/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -132,7 +124,7 @@
       <workItem from="1722286296404" duration="13877000" />
       <workItem from="1722381360280" duration="18209000" />
       <workItem from="1722439838585" duration="10328000" />
-      <workItem from="1722477594294" duration="23775000" />
+      <workItem from="1722477594294" duration="26563000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
