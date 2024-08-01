@@ -8,6 +8,7 @@ namespace Hysteria.Interface
         public void Interact();
         public bool IsInteractable();
         public bool InteractedOneTime();
+        // public bool ShowIndicator();
         public GameObject GetGameObject();
     }
 

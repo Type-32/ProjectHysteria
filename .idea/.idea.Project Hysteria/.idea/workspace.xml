@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Controller/ControllerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Interface/IInteractableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropObjectDisablerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropObjectTogglerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropObjectDisablerBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hysteria/Props/PropObjectTogglerBehaviour.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.bottinogames.samity@7b8a214b4c/Samity/Components/SamSpeaker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/8b/02d5bd5c/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/dd/92dba3df/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0fe1635722fa40459df2fd62da0fd6ca175c00/f5/6e1785a4/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -127,7 +128,7 @@
       <workItem from="1722286296404" duration="13877000" />
       <workItem from="1722381360280" duration="18209000" />
       <workItem from="1722439838585" duration="10328000" />
-      <workItem from="1722477594294" duration="15750000" />
+      <workItem from="1722477594294" duration="16793000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
