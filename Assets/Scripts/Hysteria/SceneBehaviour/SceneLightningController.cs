@@ -15,7 +15,7 @@ namespace Hysteria.SceneBehaviour
         [SerializeField] Light directionalLight;
 
         [MinMaxSlider(1, 4), SerializeField] private Vector2 flashCountRange;
-        [MinMaxSlider(10, 60), SerializeField] private Vector2 flashDurationIntervalSeconds;
+        [SerializeField] private float flashDurationIntervalSeconds = 30f;
         [MinMaxSlider(0.01f, 0.1f), SerializeField] private Vector2 flashContinuousSecondsInterval;
         [MinValue(0f), SerializeField] private float targetLightIntensity = 1000f;
 
@@ -37,19 +37,18 @@ namespace Hysteria.SceneBehaviour
             StartCoroutine(LightningRoutine());
         }
 
-        private IEnumerator LightningRoutine()
+        public IEnumerator LightningRoutine()
         {
-            while (true)
-            {
-                yield return new WaitForSeconds(random.Next((int)flashDurationIntervalSeconds.x, (int)flashDurationIntervalSeconds.y));
+            yield return new WaitForSeconds(flashDurationIntervalSeconds);
 
-                int flashCount = Mathf.RoundToInt(random.Next((int)flashCountRange.x, (int)flashCountRange.y));
-                for (int i = 0; i < flashCount; i++)
-                {
-                    StartCoroutine(FlashLightning());
-                    yield return new WaitForSeconds(random.Next((int)flashContinuousSecondsInterval.x * 100, (int)flashContinuousSecondsInterval.y * 100)/100f);
-                }
+            int flashCount = Mathf.RoundToInt(random.Next((int)flashCountRange.x, (int)flashCountRange.y));
+            for (int i = 0; i < flashCount; i++)
+            {
+                StartCoroutine(FlashLightning());
+                yield return new WaitForSeconds(0.05f);
             }
+
+            StartCoroutine(LightningRoutine());
         }
 
         private IEnumerator FlashLightning()
