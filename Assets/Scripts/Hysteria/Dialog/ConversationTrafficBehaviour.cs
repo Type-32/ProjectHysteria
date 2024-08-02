@@ -54,6 +54,8 @@ namespace Hysteria.Dialog
 
         private static ConversationTrafficBehaviour _instance;
 
+        private string _lastPlayedAudioClip = "";
+
         public static ConversationTrafficBehaviour Instance
         {
             get
@@ -136,6 +138,16 @@ namespace Hysteria.Dialog
             bool isMultiResponse = currentDialog.DialogType == DialogType.MultiResponse;
             optionsHolder.gameObject.SetActive(false);
             
+            string currentKey = $"{currentDialog.Character.CharacterName}-{_currentConversationObject.name}-{currentDialog.options.name}-{_dialogDataIndex}";
+            if (!currentDialog.CharacterAudio)
+            {
+                _lastPlayedAudioClip = "";
+            }
+            if (currentKey.Equals(_lastPlayedAudioClip) && !string.IsNullOrEmpty(_lastPlayedAudioClip))
+            {
+                GlobalAudioSourceManager.Instance.StopSound(_lastPlayedAudioClip);
+            }
+            
             if (isMultiResponse)
             {
                 dialogBG.gameObject.SetActive(false);
@@ -186,6 +198,13 @@ namespace Hysteria.Dialog
                 contentElement.text = currentDialog.CharacterContent;
                 spriteElement.sprite = currentDialog.Character.CharacterSprite;
                 spriteHolder.gameObject.SetActive(currentDialog.Character.CharacterSprite);
+            }
+            
+            if (currentDialog.CharacterAudio)
+            {
+                GlobalAudioSourceManager.Instance.LoadAudioClip(currentKey, currentDialog.CharacterAudio);
+                GlobalAudioSourceManager.Instance.PlaySound(currentKey);
+                _lastPlayedAudioClip = currentKey;
             }
         }
 
