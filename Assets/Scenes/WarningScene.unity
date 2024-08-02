@@ -1820,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneControllerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4741518772576323818, guid: 611a65feaa1a1408cae7206a2328d4d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4823865503904649157, guid: 611a65feaa1a1408cae7206a2328d4d6, type: 3}
       propertyPath: m_Camera
       value: 
