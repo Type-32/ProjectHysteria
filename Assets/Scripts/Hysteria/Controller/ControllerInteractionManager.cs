@@ -35,6 +35,8 @@ namespace Hysteria.Controller
         [SerializeField] private float detectionRangeScale = 0.8f;
         [SerializeField] private float interactionRangeScale = 1f;
 
+        public bool DetectThroughWalls = true;
+
         private void Start()
         {
             _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
@@ -42,7 +44,7 @@ namespace Hysteria.Controller
 
         private void FixedUpdate()
         {
-            // if (Controller.IsFirstPerson()) return;
+            if (Controller.IsFirstPerson()) return;
             
             IInteractableObject closestObject = null;
             float closestDistance = detectionRange;
@@ -80,7 +82,7 @@ namespace Hysteria.Controller
         private void UpdateAllTrackers(Dictionary<IInteractableObject, float> objectsInRange)
         {
             if (!_interactablesIndicatorHUD) _interactablesIndicatorHUD = FindObjectOfType<InteractablesIndicatorHUD>();
-            if (_interactablesIndicatorHUD == null) return;
+            // if (_interactablesIndicatorHUD == null) return;
 
             // Update trackers for objects in range
             foreach (var kvp in objectsInRange)
@@ -120,8 +122,12 @@ namespace Hysteria.Controller
                 Vector3 directionToCollider = collider.bounds.center - center;
                 float distanceToCollider = directionToCollider.magnitude;
 
-                if (Physics.Raycast(center, directionToCollider, out RaycastHit hit, distanceToCollider + 1) && hit.collider == collider)
+                if (DetectThroughWalls && Physics.Raycast(center, directionToCollider, out RaycastHit hit, distanceToCollider + 1) && hit.collider.Equals(collider))
                 {
+                    visibleColliders.Add(collider);
+                }
+                
+                if(!DetectThroughWalls){
                     visibleColliders.Add(collider);
                 }
             }
