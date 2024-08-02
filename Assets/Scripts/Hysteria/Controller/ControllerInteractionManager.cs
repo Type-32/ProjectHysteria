@@ -42,7 +42,7 @@ namespace Hysteria.Controller
 
         private void FixedUpdate()
         {
-            if (Controller.IsFirstPerson()) return;
+            // if (Controller.IsFirstPerson()) return;
             
             IInteractableObject closestObject = null;
             float closestDistance = detectionRange;
