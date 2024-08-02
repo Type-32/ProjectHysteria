@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 namespace Hysteria.Dialog
 {
-    public class ConversationInvoker : MonoBehaviour, IInteractableObject<ConversationInvoker>
+    public class ConversationInvoker : MonoBehaviour
     {
         [Title("Attributes")]
         [SerializeField] protected bool useCached = true;
@@ -68,11 +68,6 @@ namespace Hysteria.Dialog
         public ConversationInvoker GetObject()
         {
             return this;
-        }
-
-        object IInteractableObject.GetObject()
-        {
-            return GetObject();
         }
 
         public void Interact()
