@@ -161,7 +161,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8759555920891033177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   interactionRangeColor: {r: 1, g: 1, b: 1, a: 1}
   detectionRangeScale: 0.8
   interactionRangeScale: 1
+  DetectThroughWalls: 1
 --- !u!1 &8648758435156824803
 GameObject:
   m_ObjectHideFlags: 0

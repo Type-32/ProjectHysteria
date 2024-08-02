@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11bd567f6fd4e7ba0e8febc7111c70a, type: 3}
+  m_Name: 2starting_narrative 1
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: "Talking about purifying one's heart, and putting an end to
+      one's desire\u2026 would this teaching be convincing, when your stomach asks
+      for food?\r\n"
+    options: {fileID: 0}
+    showOneTime: 0
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: "as the rain rains harder\u2026 the dizziness grows, every
+      step forward is perhaps a challenge."
+    options: {fileID: 0}
+    showOneTime: 0
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: 'undoubtedly, it may be your resting place, becoming one with
+      this mountain, becoming one of its unwelcoming ghouls.
+
+'
+    options: {fileID: 0}
+    showOneTime: 0

@@ -15,6 +15,8 @@ MonoBehaviour:
   Dialogs:
   - DialogType: 0
     Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
-    CharacterContent: "\u968F\u7740\u4E00\u6B65\u6B65\u5F80\u4E0A\uFF0C\u677E\u5CAD\u5C71\u5C97\u4FBF\u5728\u8FDC\u5904\uFF0C\u7834\u65E7\u5C4B\u820D\u95F4\u95F4\u6392\u5F00\uFF0C\u719F\u6089\u5374\u53C8\u964C\u751F\u3002\n"
+    CharacterAudio: {fileID: 0}
+    CharacterContent: Pain... a strong headache you feel, it was as if something
+      was lost, and not to be retrieved.
     options: {fileID: 0}
     showOneTime: 0

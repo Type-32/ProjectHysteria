@@ -15,6 +15,8 @@ MonoBehaviour:
   Dialogs:
   - DialogType: 0
     Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
-    CharacterContent: "\u7389\u6811\u7AF9\u6797\u8038\u7ACB\u4E24\u6392\uFF0C\u98CE\u6B47\u96E8\u843D\u4E8E\u6708\u5149\u63D0\u7B14\u6240\u7ED8\u7684\u7EFF\u53F6\u679D\u6860\uFF0C\u594F\u8D77\u5B64\u884C\u591C\u66F2\u4E00\u9996\u3002"
+    CharacterAudio: {fileID: 0}
+    CharacterContent: the trees aside glimmers under the moon... the further above
+      as you move, you see broken things everywhere
     options: {fileID: 0}
     showOneTime: 0
