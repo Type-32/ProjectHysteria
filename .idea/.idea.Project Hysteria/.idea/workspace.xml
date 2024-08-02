@@ -5,41 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e90a59-7adf-44dc-9fb3-b6a60ea961c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/CRTShader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/CRTShader.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Dithering.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Dithering.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Fog.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Fog.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Pixelation.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PostEffect/Pixelation.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/CRTEffectController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/CRTEffectController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/CRTRenderFeature.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/CRTRenderFeature.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/Crt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-PSX/Shaders/CRT/Crt.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Hysteria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InteractablesIndicatorHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarningScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTEffectController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTEffectController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTRenderFeature.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/CRTRenderFeature.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/Crt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CRT/Crt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/CRTShader.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/CRTShader.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dithering.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Dithering.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Fog.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Fog.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Pixelation.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Pixelation.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP-PSX Render Pipeline Asset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP-PSX-Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP-PSX-Render Pipeline Asset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +81,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Hysteria伍瘟_Mac.app/Contents/MacOS/Hysteria瘟" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/MacRelease/Hysteria伍瘟_Mac.app/Contents/MacOS/Hysteria瘟" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Build/Hysteria伍瘟_Mac.app/Contents/MacOS" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -172,7 +138,7 @@
       <workItem from="1722381360280" duration="18209000" />
       <workItem from="1722439838585" duration="10328000" />
       <workItem from="1722477594294" duration="31558000" />
-      <workItem from="1722607244929" duration="3964000" />
+      <workItem from="1722607244929" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Sth">
       <option name="closed" value="true" />
