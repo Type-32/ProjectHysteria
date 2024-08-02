@@ -318,7 +318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPropInteractable: 1
-  animator: {fileID: 0}
+  animator: {fileID: 1132591876224896111}
+  CanExitControl: 1
 --- !u!1 &8041337088176487935
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,5 +428,10 @@ PrefabInstance:
 --- !u!4 &1132591876218015901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 448380, guid: a06a04f4932bb0840b5c8800701b181c, type: 3}
+  m_PrefabInstance: {fileID: 1132591876217571297}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1132591876224896111 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9554830, guid: a06a04f4932bb0840b5c8800701b181c, type: 3}
   m_PrefabInstance: {fileID: 1132591876217571297}
   m_PrefabAsset: {fileID: 0}
