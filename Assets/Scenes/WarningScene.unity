@@ -311,8 +311,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This game contains intense horror elements that may not be suitable for
-    all players.\n\n\u904A\u6232\u5305\u542B\u5F37\u70C8\u7684\u6050\u6016\u5143\u7D20\uFF0C\u53EF\u80FD\u4E0D\u9069\u5408\u6240\u6709\u73A9\u5BB6\u3002"
+  m_Text: "This game contains intense horror elements and flashing lights that may
+    not be suitable for all players. You have been warned.\n\n\u904A\u6232\u5305\u542B\u5F37\u70C8\u7684\u6050\u6016\u5143\u7D20\uFF0C\u53EF\u80FD\u4E0D\u9069\u5408\u6240\u6709\u73A9\u5BB6\u3002"
 --- !u!222 &405991053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1315,8 +1315,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: This game contains intense horror elements that may
-              not be suitable for all players.
+            m_StringArgument: This game contains intense horror elements and flashing
+              lights that may not be suitable for all players. You have been warned.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1432469885
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1

@@ -65,7 +65,7 @@ public class InteractablesIndicatorHUD : MonoBehaviour
 
                 kvp.Value.anchoredPosition = screenPosition;
 
-                // Hide the tracker if the object is behind the camera
+                // Hide the tracker if the object is behind the camera.
                 kvp.Value.gameObject.SetActive(viewportPosition.z > 0);
             }
         }
