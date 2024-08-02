@@ -19,7 +19,7 @@ MonoBehaviour:
   singMode: 0
   addPadding: 1
   preCache:
-  - text: This game contains intense horror elements that may not be suitable for
-      all players.
+  - text: This game contains intense horror elements and flashing lights that may
+      not be suitable for all players. You have been warned.
     phonetic: 0
   enableLogging: 0
