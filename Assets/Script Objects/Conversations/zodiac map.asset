@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11bd567f6fd4e7ba0e8febc7111c70a, type: 3}
+  m_Name: zodiac map
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: a sound appears in your head...
+    options: {fileID: 0}
+    showOneTime: 1
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: b10aad8270fa8c443a5fc2ee9737f7b4, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: '"Recalling something? "'
+    options: {fileID: 0}
+    showOneTime: 0
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 765a4eb6a40b7418c9885b14c2442a23, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: "\"Zodiac\u2026 keeper of the \u2018Great Year\u2019.\""
+    options: {fileID: 0}
+    showOneTime: 0
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: b10aad8270fa8c443a5fc2ee9737f7b4, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: "\"Years\u2026 lost count already, but seems like the keepers
+      are in the wrong position.\""
+    options: {fileID: 0}
+    showOneTime: 0
+  - DialogType: 0
+    Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
+    CharacterAudio: {fileID: 0}
+    CharacterContent: somehow, you staterd a converstation with it... a memory of
+      the past grow, youve known it before.
+    options: {fileID: 0}
+    showOneTime: 0

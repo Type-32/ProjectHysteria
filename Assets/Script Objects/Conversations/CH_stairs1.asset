@@ -15,6 +15,7 @@ MonoBehaviour:
   Dialogs:
   - DialogType: 0
     Character: {fileID: 11400000, guid: 80d19870cee18479ea40a03b5c44caab, type: 2}
-    CharacterContent: "\u9636\u68AF\u9611\u73CA\u5DF2\u8FC7\u7ECF\u5E74\u65E0\u4EBA\u6253\u626B\uFF0C\u788E\u77F3\u9EC4\u571F\u904D\u5E03\u5176\u4E0A\u3002"
+    CharacterAudio: {fileID: 0}
+    CharacterContent: 'fallen rocks scatter above the old staircase... '
     options: {fileID: 0}
     showOneTime: 0

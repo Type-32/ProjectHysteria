@@ -138,7 +138,7 @@ namespace Hysteria.Dialog
             bool isMultiResponse = currentDialog.DialogType == DialogType.MultiResponse;
             optionsHolder.gameObject.SetActive(false);
             
-            string currentKey = $"{currentDialog.Character.CharacterName}-{_currentConversationObject.name}-{currentDialog.options.name}-{_dialogDataIndex}";
+            string currentKey = $"{currentDialog.Character.CharacterName}-{_currentConversationObject.name}-{_dialogDataIndex}";
             if (!currentDialog.CharacterAudio)
             {
                 _lastPlayedAudioClip = "";
